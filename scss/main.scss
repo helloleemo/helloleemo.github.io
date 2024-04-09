@@ -2,13 +2,33 @@ $mainTextColor: #ffffff;
 $textColor: rgb(255, 255, 255);
 
 // bgColor
-$navColor: rgb(104, 104, 104);
+$navColor: rgba(0, 0, 0, 0.9);
 $mainSection: rgb(28, 109, 157);
+$aboutColor: rgb(255, 236, 126);
 
+//objectColor
+$btn: white;
+
+// text
+@mixin fontH1 {
+  font-family: "Rubik", sans-serif;
+
+  padding: 15px 0px;
+}
+@mixin fontH3 {
+  font-family: "Rubik", sans-serif;
+  padding-top: 10px;
+}
+
+@mixin fontP {
+  font-family: "Rubik", sans-serif;
+  padding: 10px 0;
+  line-height: 20px;
+}
 @mixin fontTitle {
   font-family: "Anton", Arial, Helvetica, sans-serif;
   color: white;
-  font-size: 50px;
+  font-size: 100px;
 }
 @mixin fontContent {
   font-family: "Rubik", sans-serif;
@@ -54,14 +74,17 @@ $mainSection: rgb(28, 109, 157);
 
   li {
     list-style: none;
-    padding-right: 20px;
+    padding-right: 10px;
     margin: 0 5px;
   }
   a {
     color: $textColor;
+    @include fontContent;
+    font-size: 16px;
     text-decoration: none;
     display: inline-block;
-    // padding: 10px 25px;
+    padding: 10px 15px;
+    letter-spacing: 1px;
   }
 }
 
@@ -70,20 +93,99 @@ $mainSection: rgb(28, 109, 157);
 // ------------------
 .mainSection {
   background-color: $mainSection;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
 
   letter-spacing: 2px;
+
   .title {
     @include fontTitle;
+    margin-bottom: 10px;
   }
   .subtitle {
     @include fontTitle;
     font-size: 30px;
+    margin-bottom: 100px;
   }
 
   .btn {
     border: none;
-    background-color: #ffffff;
-    padding: 10px 20px;
+    background-color: $btn;
+    padding: 20px 50px;
     @include fontContent;
+    color: $mainSection;
+    font-size: 20px;
+
+    cursor: pointer;
   }
+}
+
+// ------------------
+// $About
+// ------------------
+
+.about {
+  height: 100vh;
+  background-color: $aboutColor;
+
+  display: flex;
+
+  .imgbox {
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+
+    flex: 1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .intro {
+    flex: 1;
+
+    margin: auto;
+    padding-left: 50px;
+    line-height: 20px;
+    @include fontContent;
+
+    h1 {
+      @include fontH1;
+    }
+    h3 {
+      @include fontH3;
+      color: rgba(0, 0, 0, 0.8);
+    }
+    p {
+      @include fontP;
+      max-width: 600px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+
+//icons
+
+.fa-brands {
+  font-size: 30px;
+}
+.adobe {
+  letter-spacing: 0px;
+  padding: 3px;
+  margin-right: 15px;
+
+  font-weight: 500;
+
+  background-color: black;
+  color: #e8e470;
+
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 5px;
 }
