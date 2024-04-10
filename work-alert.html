@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeeMo WorkStation</title>
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Rubik -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inconsolata:wght@200..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Maven+Pro:wght@400..900&family=Reddit+Mono:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Anton -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inconsolata:wght@200..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Maven+Pro:wght@400..900&family=Reddit+Mono:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- js -->
+    <script
+      src="https://kit.fontawesome.com/9142318aee.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="node_modules/animejs/lib/anime.min.js" defer></script>
+    <script src="js/work-alert.js" defer></script>
+    <!-- imported style -->
+
+    <!-- Custom Style -->
+
+    <link rel="stylesheet" href="css/work-alert.css" />
+  </head>
+  <body>
+    <!-- <div class="navbar">
+      <div class="container">
+        <div class="navbarItems">
+          <div class="logoImg">
+            <div class="logo"></div>
+          </div>
+          <div class="item">
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Work</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="wrapper-sidebar">
+      <div class="sidebar">
+        <a href="index.html#work">
+          <h3>
+            <i class="fa-solid fa-arrow-left" fa-bounce></i>
+            back to WorkStation
+          </h3>
+        </a>
+        <ul>
+          <li><a href="#toast">Toast</a></li>
+          <li><a href="">Slide</a></li>
+          <li><a href="#alert">Alert</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!----------- content ----------->
+    <!----------- toast ----------->
+    <div id="toast" class="wrapper-toast">
+      <div class="section-toast">
+        <div class="introduction">
+          <h1>Popup Toast</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, eius
+            illum unde natus, ratione quia error ipsa optio culpa incidunt
+            quisquam id, impedit illo? Quis deserunt impedit rem cumque maiores.
+          </p>
+          <button onclick="toastSuccess()">成功訂購商品</button>
+          <button onclick="toastError()">訂購商品失敗</button>
+          <div class="toast toast-success">
+            訂購成功！可以查看 Email 確認訂單細節！
+          </div>
+          <div class="toast toast-error">抱歉，訂購失敗！請稍後重新嘗試</div>
+        </div>
+        <div class="imgbox"><img src="src/web.png" alt="" /></div>
+      </div>
+      <div class="component-toast"></div>
+    </div>
+    <!----------- register ----------->
+    <!----------- Alert ----------->
+    <div id="alert" class="wrapper-alert">
+      <div class="section-alert">
+        <div class="introduction">
+          <h1>Alert windows</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, eius
+            illum unde natus, ratione quia error ipsa optio culpa incidunt
+            quisquam id, impedit illo? Quis deserunt impedit rem cumque maiores.
+          </p>
+        </div>
+        <div class="component-alert">
+          <div class="alert alertSuccessful">
+            <i class="fa-solid fa-circle-check"></i>
+            <h3>Operation Successful</h3>
+            <p>Your action has been successfully completed.</p>
+            <button class="btn">×</button>
+          </div>
+
+          <div class="alert alertFailed">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <h3>Operation Failed</h3>
+            <p>Unfortunately, your action could not be completed.</p>
+            <button class="btn">×</button>
+          </div>
+
+          <div class="alert alertAction">
+            <i class="fa-solid fa-circle-question"></i>
+            <h3>Confirm Action</h3>
+            <p>Are you sure you want to proceed with this action?</p>
+            <button class="btn">x</button>
+          </div>
+
+          <div class="alert alertInformation">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <h3>Important Information</h3>
+            <p>Please note the changes made to our privacy policy.</p>
+            <button class="btn">×</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!----------- Alert ----------->
+    <div class="wrapper-register"></div>
+
+    <!----------- content ----------->
+  </body>
+</html>

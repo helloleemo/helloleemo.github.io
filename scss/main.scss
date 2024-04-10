@@ -1,3 +1,5 @@
+@import url(../css/navbar.css);
+
 $mainTextColor: #ffffff;
 $textColor: rgb(255, 255, 255);
 
@@ -42,6 +44,7 @@ $lineColor: rgba(0, 0, 0, 0.7);
   box-sizing: border-box;
   margin: 0;
   @include fontContent;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -205,9 +208,40 @@ $lineColor: rgba(0, 0, 0, 0.7);
 // ------------------
 
 .workSection {
+  padding: 150px;
+  background-color: #2d2d2d;
+
+  h1 {
+    @include fontH1;
+    text-align: center;
+    color: white;
+  }
 }
 .set {
-  .tags {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .tagAll {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    .text {
+      padding: 10px 20px;
+      margin: 10px 20px;
+      border-radius: 20px;
+      background-color: #ffffff;
+      font-weight: 400;
+
+      transition: all 0.2s ease;
+
+      cursor: pointer;
+      &:hover {
+        background-color: $mainSection;
+        color: white;
+      }
+    }
   }
   .cardbox {
     display: flex;
@@ -216,6 +250,7 @@ $lineColor: rgba(0, 0, 0, 0.7);
     gap: 50px;
   }
 }
+//卡片樣式
 .imgbox {
   max-width: 350px;
   height: 550px;
@@ -223,10 +258,6 @@ $lineColor: rgba(0, 0, 0, 0.7);
   position: relative;
 
   border-radius: 10px;
-
-  &:hover {
-    opacity: 1;
-  }
 
   .alpha {
     width: 100%;
@@ -245,12 +276,12 @@ $lineColor: rgba(0, 0, 0, 0.7);
     transition: all 0.3s ease;
 
     opacity: 0;
-    transition: opacity 0.3s ease;
 
     .description {
       padding: 0 30px;
-      h1 {
+      h2 {
         @include fontH1;
+        font-size: 30px;
         color: white;
       }
       h3 {
@@ -263,14 +294,20 @@ $lineColor: rgba(0, 0, 0, 0.7);
       }
     }
   }
-  img {
+  .working {
     width: 100%;
     height: 100%;
     object-fit: cover;
 
     transition: transform 0.3s ease;
   }
-  &:hover img {
-    transform: scale(1.15); /* 当鼠标悬停在 .imgbox 上时，放大图片 */
-  }
+}
+
+.imgbox:hover .alpha {
+  opacity: 1;
+  z-index: 10;
+}
+
+.imgbox:hover .working {
+  transform: scale(1.2);
 }
