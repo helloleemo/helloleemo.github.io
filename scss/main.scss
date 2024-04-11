@@ -127,6 +127,7 @@ $lineColor: rgba(0, 0, 0, 0.7);
     @include fontContent;
     color: $mainSection;
     font-size: 20px;
+    font-weight: 500;
 
     cursor: pointer;
   }

@@ -1,8 +1,21 @@
-@import url(template.css);
-
+@import url(../css/template.css);
 html {
   margin: 0;
   scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.top {
+  z-index: 100;
 }
 
 h1 {
@@ -11,48 +24,259 @@ h1 {
   padding: 15px 0px;
   color: rgba(0, 0, 0, 0.8);
 }
+
 p {
   font-family: "Rubik", sans-serif;
   padding: 10px 0;
-  line-height: 20px;
+  line-height: 30px;
   color: rgba(0, 0, 0, 0.6);
+  font-size: 20px;
 }
 
-.wrapper-sidebar {
+/*----------------- 
+lightbox section 
+-----------------*/
+.wrapper-lightbox {
   width: 100%;
+  height: 90%;
+  position: relative;
 }
-.wrapper-register {
-  height: 1000px;
+.wrapper-lightbox .blackcover {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  z-index: -9;
+}
+.wrapper-lightbox img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -10;
+}
+
+.section-lightbox {
+  padding: 150px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro-lightbox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.intro-lightbox h1 {
+  color: white;
+}
+.intro-lightbox p {
+  max-width: 500px;
+  color: white;
+  text-align: center;
+}
+.intro-lightbox button {
+  border: none;
+  width: 250px;
+  height: 50px;
+  padding: 10px 20px;
+  margin: 100px 0px;
+  background-color: rgb(28, 109, 157);
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.intro-lightbox button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(28, 109, 157);
+}
+
+.lightbox {
+  max-width: 1000px;
+  height: 90vh;
+  padding: 20px 20px;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 10px;
+  position: fixed;
+  overflow-y: scroll;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.lightbox ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+.lightbox ul li {
+  width: 250px;
+  list-style: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border: 1px solid rgb(165, 165, 165);
+  color: rgb(165, 165, 165);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.lightbox ul li:hover {
+  background-color: rgb(165, 165, 165);
+  color: white;
+  border: none;
+}
+.lightbox ul .selectedchange {
+  background-color: rgb(135, 177, 210);
+  color: white;
+  border: none;
+}
+.lightbox p {
+  text-align: center;
+  padding-top: 50px;
+}
+.lightbox textarea {
+  width: 500px;
+  height: 50px;
+  border: none;
+  background-color: #f1f1f1;
+  resize: none;
+}
+.lightbox #featureText {
+  border: 1px solid #ebf1f4;
+  background-color: #ebf1f4;
+  font-size: 16px;
+  line-height: 25px;
+  width: 500px;
+  padding: 50px 40px;
+  margin-top: 30px;
+}
+.lightbox button {
+  border: none;
+  width: 250px;
+  height: 50px;
+  padding: 10px 20px;
+  margin: 60px 0px;
+  background-color: rgb(28, 109, 157);
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.lightbox button:hover {
+  background-color: rgb(58, 58, 58);
+}
+.lightbox .btnClose {
+  border: none;
   width: 10px;
-  background-color: red;
+  height: 10px;
+  font-size: 30px;
+  font-weight: 300;
+  position: absolute;
+  top: -30px;
+  right: 0;
+  background-color: #fff;
+  color: grey;
+  cursor: pointer;
 }
+.lightbox .btnClose:hover {
+  background-color: #fff;
+  color: grey;
+  font-size: 35px;
+}
+
 /*----------------- 
 toast section 
 -----------------*/
-.wrapper-toast {
-  background-color: rgb(234, 234, 234);
-}
-
 .section-toast {
   padding: 150px 50px;
-
   max-width: 1200px;
-  margin: auto;
-
+  margin: 0 auto;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
-}
-.section-toast .introduction {
-  max-width: 400px;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 .section-toast .imgbox {
-  max-width: 700px;
-  margin-left: 50px;
+  padding-top: -150px;
+  height: 500px;
+  width: 60%;
+  position: relative;
 }
-.section-toast img {
+.section-toast .imgbox img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.section-toast .imgbox .toast {
+  padding: 20px 30px;
+  margin: 0 20px;
+  position: absolute;
+  top: 12%;
+  border-radius: 10px;
+  cursor: pointer;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+.section-toast .imgbox .toast:hover {
+  transform: scale(1.05);
+}
+.section-toast .imgbox .toast h3 {
+  font-size: 1.5em;
+  color: white;
+}
+.section-toast .imgbox .toast p {
+  color: rgba(255, 255, 255, 0.6);
+}
+.section-toast .imgbox .toast-error {
+  background-color: #d07171;
+}
+.section-toast .imgbox .toast-success {
+  background-color: #509d97;
+}
+.section-toast .imgbox .toast-show {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+.section-toast .introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.section-toast .introduction button {
+  border: none;
+  max-width: 250px;
+  height: 50px;
+  padding: 10px 20px;
+  background-color: rgb(28, 109, 157);
+  color: white;
+  font-size: 18px;
+  margin: 10px 0px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.section-toast .introduction button:hover {
+  background-color: rgb(49, 49, 49);
 }
 
 /*----------------- 
@@ -61,14 +285,16 @@ Alert section
 .wrapper-alert {
   background-color: rgb(244, 244, 244);
 }
+
 .section-alert {
   padding: 150px 50px;
   max-width: 1200px;
+  height: 750px;
   margin: 0 auto;
-
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .introduction {
@@ -78,70 +304,74 @@ Alert section
 .component-alert {
   display: flex;
   flex-direction: column;
+  margin-top: -10px;
 }
 
 .alert {
-  width: 600px;
-  height: 90px;
+  max-width: 600px;
+  padding: 5px 10px;
   position: relative;
-
-  margin-top: 10px;
+  margin: 10px 0;
   transition: all 0.2s ease;
-
-  i {
-    font-size: 40px;
-    position: absolute;
-    top: 30%;
-    margin-left: 20px;
-  }
-  h3 {
-    padding-top: 20px;
-    font-size: 20px;
-    margin-left: 80px;
-  }
-  p {
-    font-size: 16px;
-    line-height: 30px;
-    margin-left: 80px;
-    color: rgba(0, 0, 0, 0.6);
-  }
-  button {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-  }
 }
+.alert i {
+  font-size: 40px;
+  position: absolute;
+  top: 30%;
+  margin-left: 20px;
+}
+.alert h3 {
+  padding-top: 20px;
+  font-size: 20px;
+  margin-left: 80px;
+}
+.alert p {
+  font-size: 16px;
+  line-height: 30px;
+  margin-left: 80px;
+  padding-bottom: 10px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.alert button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
 .alertSuccessful {
   background-color: rgb(206, 235, 244);
   border-left: 10px solid rgb(52, 104, 168);
-  h3,
-  i {
-    color: rgb(52, 104, 168);
-  }
 }
+.alertSuccessful h3,
+.alertSuccessful i {
+  color: rgb(52, 104, 168);
+}
+
 .alertFailed {
   background-color: rgb(255, 228, 228);
   border-left: 10px solid rgb(190, 85, 85);
-  h3,
-  i {
-    color: rgb(190, 85, 85);
-  }
 }
+.alertFailed h3,
+.alertFailed i {
+  color: rgb(190, 85, 85);
+}
+
 .alertAction {
   background-color: rgb(253, 254, 234);
   border-left: 10px solid rgb(179, 141, 7);
-  h3,
-  i {
-    color: rgb(179, 141, 7);
-  }
 }
+.alertAction h3,
+.alertAction i {
+  color: rgb(179, 141, 7);
+}
+
 .alertInformation {
   background-color: rgb(215, 249, 219);
   border-left: 10px solid rgb(54, 162, 122);
-  h3,
-  i {
-    color: rgb(54, 162, 122);
-  }
+}
+.alertInformation h3,
+.alertInformation i {
+  color: rgb(54, 162, 122);
 }
 
 .alert:hover {
@@ -154,9 +384,11 @@ Alert section
   color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
   transition: all 0.2s ease;
-
   font-size: 20px;
 }
+
 .btn:hover {
   transform: scale(1.5);
 }
+
+/*# sourceMappingURL=work-alert.css.map */

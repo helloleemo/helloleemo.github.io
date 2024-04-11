@@ -35,24 +35,6 @@
     <link rel="stylesheet" href="css/work-alert.css" />
   </head>
   <body>
-    <!-- <div class="navbar">
-      <div class="container">
-        <div class="navbarItems">
-          <div class="logoImg">
-            <div class="logo"></div>
-          </div>
-          <div class="item">
-            <ul>
-              <li><a href="">Home</a></li>
-              <li><a href="">About</a></li>
-              <li><a href="">Work</a></li>
-              <li><a href="">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <div class="wrapper-sidebar">
       <div class="sidebar">
         <a href="index.html#work">
@@ -62,14 +44,32 @@
           </h3>
         </a>
         <ul>
+          <li><a href="#lightbox">Lightbox</a></li>
           <li><a href="#toast">Toast</a></li>
-          <li><a href="">Slide</a></li>
           <li><a href="#alert">Alert</a></li>
         </ul>
       </div>
     </div>
 
     <!----------- content ----------->
+
+    <!----------- Light Box ----------->
+    <div id="lightbox" class="wrapper-lightbox">
+      <div class="blackcover"></div>
+      <img src="https://picsum.photos/1200/400" alt="" />
+      <div class="section-lightbox">
+        <div class="intro-lightbox">
+          <h1>Light Box</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore
+            magnam commodi, iste impedit nemo blanditiis culpa unde? Voluptate
+          </p>
+          <button onclick="showUp()">Share with us</button>
+        </div>
+      </div>
+    </div>
+    <!----------- Light Box ----------->
+
     <!----------- toast ----------->
     <div id="toast" class="wrapper-toast">
       <div class="section-toast">
@@ -80,18 +80,32 @@
             illum unde natus, ratione quia error ipsa optio culpa incidunt
             quisquam id, impedit illo? Quis deserunt impedit rem cumque maiores.
           </p>
-          <button onclick="toastSuccess()">成功訂購商品</button>
-          <button onclick="toastError()">訂購商品失敗</button>
-          <div class="toast toast-success">
-            訂購成功！可以查看 Email 確認訂單細節！
-          </div>
-          <div class="toast toast-error">抱歉，訂購失敗！請稍後重新嘗試</div>
+          <button id="btn-toastSuccess" onclick="toastSuccess()">
+            Success
+          </button>
+          <button id="btn-toastError" onclick="toastError()">Failed</button>
         </div>
-        <div class="imgbox"><img src="src/web.png" alt="" /></div>
+        <div class="imgbox">
+          <img src="src/web.png" alt="" />
+          <div class="toast toast-success">
+            <h3>Successful order!</h3>
+            <p>
+              Thank you for shopping with us. You will receive a confirmation
+              email shortly with your order details.
+            </p>
+          </div>
+          <div class="toast toast-error">
+            <h3>Sorry! Something is wrong!</h3>
+            <p>
+              Please check your payment information and try again, or contact
+              our customer support for assistance.
+            </p>
+          </div>
+        </div>
       </div>
       <div class="component-toast"></div>
     </div>
-    <!----------- register ----------->
+    <!----------- toast ----------->
     <!----------- Alert ----------->
     <div id="alert" class="wrapper-alert">
       <div class="section-alert">
