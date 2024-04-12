@@ -38,7 +38,6 @@ lightbox section
 -----------------*/
 .wrapper-lightbox {
   width: 100%;
-  height: 90%;
   position: relative;
 }
 .wrapper-lightbox .blackcover {
@@ -108,7 +107,6 @@ lightbox section
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid black;
   background-color: white;
   border-radius: 10px;
   position: fixed;
@@ -202,6 +200,95 @@ lightbox section
 }
 
 /*----------------- 
+Form Validation section 
+-----------------*/
+.section-form {
+  background-color: rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.section-form .introduction-form {
+  padding: 100px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.section-form form {
+  margin: 0 auto;
+  margin-bottom: 150px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 50px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.section-form form:hover {
+  transform: scale(1.2);
+}
+.section-form form h3 {
+  font-size: 25px;
+  text-align: center;
+  padding: 20px 0;
+}
+.section-form form input {
+  border: none;
+  padding: 10px 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+.section-form form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+}
+.section-form form button {
+  border: none;
+  max-width: 250px;
+  height: 50px;
+  padding: 10px 50px;
+  background-color: rgb(28, 109, 157);
+  color: white;
+  font-size: 18px;
+  margin: 10px auto;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.section-form form button:hover {
+  background-color: rgb(49, 49, 49);
+}
+.section-form .requiredUsername {
+  font-size: 14px;
+  padding-top: 5px;
+  color: #d07171;
+  display: none;
+}
+.section-form .requiredEmail {
+  font-size: 14px;
+  padding-top: 5px;
+  color: #d07171;
+  display: none;
+}
+.section-form .requiredPassword1 {
+  font-size: 14px;
+  padding-top: 5px;
+  color: #d07171;
+  display: none;
+}
+.section-form .requiredPassword2 {
+  font-size: 14px;
+  padding-top: 5px;
+  color: #d07171;
+  display: none;
+}
+
+/*----------------- 
 toast section 
 -----------------*/
 .section-toast {
@@ -289,7 +376,7 @@ Alert section
 .section-alert {
   padding: 150px 50px;
   max-width: 1200px;
-  height: 750px;
+  height: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -389,6 +476,12 @@ Alert section
 
 .btn:hover {
   transform: scale(1.5);
+}
+
+.footer {
+  background-color: #484848;
+  height: 50px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=work-alert.css.map */

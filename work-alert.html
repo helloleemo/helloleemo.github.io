@@ -45,6 +45,7 @@
         </a>
         <ul>
           <li><a href="#lightbox">Lightbox</a></li>
+          <li><a href="#form">FormValidate</a></li>
           <li><a href="#toast">Toast</a></li>
           <li><a href="#alert">Alert</a></li>
         </ul>
@@ -69,6 +70,77 @@
       </div>
     </div>
     <!----------- Light Box ----------->
+    <!----------- form ----------->
+
+    <div id="form" class="wrapper-form">
+      <div class="section-form">
+        <div class="introduction-form">
+          <h1>Form Validate</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, eius
+            illum unde natus, ratione quia error ipsa optio culpa incidunt
+            quisquam id, impedit illo? Quis deserunt impedit rem cumque maiores.
+          </p>
+        </div>
+
+        <form id="Form">
+          <h3>Register</h3>
+          <label for="username">Username</label>
+
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+            minlength="10"
+            maxlength="20"
+            placeholder="please input user name"
+          />
+          <div class="requiredUsername">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </div>
+
+          <br /><br />
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="example@example.com"
+          />
+          <div class="requiredEmail">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </div>
+          <br /><br />
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            minlength="6"
+            placeholder="at least 6 characters"
+          />
+          <label for="confirm_password"></label>
+          <input
+            type="password"
+            id="confirm_password"
+            name="confirm_password"
+            required
+            placeholder="input again"
+          />
+          <div class="requiredPassword1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </div>
+          <div class="requiredPassword2">須符合輸入密碼</div>
+          <br /><br />
+          <button type="submit" id="btnSubmit">submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!----------- form ----------->
 
     <!----------- toast ----------->
     <div id="toast" class="wrapper-toast">
@@ -152,5 +224,9 @@
     <div class="wrapper-register"></div>
 
     <!----------- content ----------->
+
+    <!----------- footer ----------->
+    <div class="footer"></div>
+    <!----------- footer ----------->
   </body>
 </html>

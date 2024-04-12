@@ -175,3 +175,70 @@ btnClose.addEventListener("click", function () {
   lightbox.remove();
   html.classList.remove("overlay");
 });
+
+//表單驗證
+
+document.getElementById("Form").addEventListener("submit", function (event) {
+  var form = this;
+
+  // 確認密碼一樣
+  if (form.password.value !== form.confirm_password.value) {
+    alert("密碼和確認密碼不匹配！");
+    event.preventDefault(); // 防止表單提交
+  }
+});
+
+const form = document.querySelector("Form");
+let username = document.querySelector("#username");
+const email = document.querySelector("#email");
+const password = document.querySelector("#password");
+const confirm = document.querySelector("#confirm_password");
+const btnSubmit = document.querySelector("#btnSubmit");
+
+function validation() {
+  let requiredUsername = document.querySelector(".requiredUsername");
+  let requiredEmail = document.querySelector(".requiredEmail");
+  let requiredPassword1 = document.querySelector(".requiredPassword1");
+  let requiredPassword2 = document.querySelector(".requiredPassword2");
+
+  if (
+    username.value.trim() == "" ||
+    username.value.length >= 20 ||
+    username.value.length < 10
+  ) {
+    requiredUsername.style.display = "block";
+    username.style.borderBottom = "1px solid rgba(231, 41, 41, 0.4)";
+  } else {
+    requiredUsername.style.display = "none";
+    username.style.borderBottom = "1px solid rgba(0, 0, 0, 0.2)";
+  }
+
+  if (email.value.trim() == "" || email.value.includes("@")) {
+    requiredEmail.style.display = "block";
+    email.style.borderBottom = "1px solid rgba(231, 41, 41, 0.4)";
+  } else {
+    requiredUsername.style.display = "none";
+    email.style.borderBottom = "1px solid rgba(0, 0, 0, 0.2)";
+  }
+
+  if (
+    password.value.trim() === "" ||
+    password.value.length < 6 ||
+    password.value.length > 20
+  ) {
+    requiredPassword1.style.display = "block";
+    password.style.borderBottom = "1px solid rgba(231, 41, 41, 0.4)";
+  } else if (confirm_password.value !== password.value) {
+    requiredPassword1.style.display = "none";
+    requiredPassword2.style.display = "block";
+    password.style.borderBottom = "1px solid rgba(0, 0, 0, 0.2)";
+    confirm.style.borderBottom = "1px solid rgba(231, 41, 41, 0.4)";
+  } else {
+    requiredPassword1.style.display = "none";
+    requiredPassword2.style.display = "none";
+    password.style.borderBottom = "1px solid rgba(0, 0, 0, 0.2)";
+  }
+}
+
+btnSubmit.addEventListener("click", validation);
+// btnSubmit.onclick = validation;
