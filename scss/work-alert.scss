@@ -1,6 +1,11 @@
 @import url(../css/template.css);
 
 $mainSection: rgb(28, 109, 157);
+@mixin display {
+  font-size: 14px;
+  padding-top: 5px;
+  color: #d07171;
+}
 
 html {
   margin: 0;
@@ -38,7 +43,7 @@ lightbox section
 -----------------*/
 .wrapper-lightbox {
   width: 100%;
-  height: 90%;
+  // height: 90vh;
   position: relative;
 
   .blackcover {
@@ -116,7 +121,7 @@ lightbox section
   justify-content: space-around;
   align-items: center;
 
-  border: 1px solid black;
+  // border: 1px solid black;
   background-color: white;
   border-radius: 10px;
 
@@ -227,8 +232,113 @@ lightbox section
 }
 
 /*----------------- 
+Form Validation section 
+-----------------*/
+
+.wrapper-form {
+}
+.section-form {
+  background-color: rgba(0, 0, 0, 0.05);
+
+  // height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  .introduction-form {
+    padding: 100px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  form {
+    margin: 0 auto;
+    margin-bottom: 150px;
+
+    background-color: #fff;
+    // border: 1px solid black;
+    border-radius: 10px;
+    padding: 50px;
+
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    h3 {
+      font-size: 25px;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    input {
+      border: none;
+      padding: 10px 5px;
+
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      outline: none;
+
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.4);
+        font-size: 14px;
+      }
+    }
+    button {
+      border: none;
+      max-width: 250px;
+      height: 50px;
+      padding: 10px 50px;
+      background-color: $mainSection;
+      color: white;
+      font-size: 18px;
+      margin: 10px auto;
+      //   margin: 10 auto;
+      text-align: center;
+
+      cursor: pointer;
+
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: rgb(49, 49, 49);
+      }
+    }
+  }
+
+  .requiredUsername {
+    @include display;
+    display: none;
+  }
+  .requiredEmail {
+    @include display;
+    display: none;
+  }
+  .requiredPassword1 {
+    @include display;
+    display: none;
+  }
+  .requiredPassword2 {
+    @include display;
+    display: none;
+  }
+}
+
+/*----------------- 
 toast section 
 -----------------*/
+
 .wrapper-toast {
 }
 
@@ -344,7 +454,7 @@ Alert section
 .section-alert {
   padding: 150px 50px;
   max-width: 1200px;
-  height: 750px;
+  height: 100%;
   margin: 0 auto;
 
   display: flex;
@@ -446,4 +556,10 @@ Alert section
 }
 .btn:hover {
   transform: scale(1.5);
+}
+
+.footer {
+  background-color: #484848;
+  height: 50px;
+  width: 100%;
 }
