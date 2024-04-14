@@ -3,9 +3,9 @@
 // ---------------
 
 
-$(document).ready(function(){
-  $(".owl-carousel").owlCarousel();
-});
+// $(document).ready(function(){
+//   $(".owl-carousel").owlCarousel();
+// });
 
 // var owl = $('.owl-carousel');
 // owl.owlCarousel({
@@ -45,6 +45,9 @@ fetch("https://picsum.photos/v2/list?page=2&limit=26")
                     const li = document.createElement("li");
                     const divImgbox = document.createElement("div");
                     const img = document.createElement("img");
+                    const divOverlay = document.createElement("div");
+                    const pOverlay = document.createElement("p");
+                    const h3Overlay = document.createElement("h3");
                     const divInfo = document.createElement("div");
                     const divAvatar = document.createElement("div");
                     const imgAvatar = document.createElement("img");
@@ -57,6 +60,7 @@ fetch("https://picsum.photos/v2/list?page=2&limit=26")
                     const p2 = document.createElement("p");
 
                     divImgbox.classList.add("imgbox");
+                    divOverlay.classList.add("overlay")
                     img.setAttribute("src", picsum.download_url); // 使用picsum图片的URL
                     
                     divInfo.classList.add("info");
@@ -66,6 +70,8 @@ fetch("https://picsum.photos/v2/list?page=2&limit=26")
                     divName.classList.add("name");
                     divName.textContent = `${author.name.first} ${author.name.last}`; // 用户名
                     
+                    h3Overlay.textContent = `${author.name.last}`;
+
                     divTag.classList.add("tag");
                     divTag.textContent = "pro"; // 标签
 
@@ -78,6 +84,10 @@ fetch("https://picsum.photos/v2/list?page=2&limit=26")
                     p2.textContent = randomEye;
 
                     divImgbox.appendChild(img);
+                    divImgbox.appendChild(divOverlay);
+                    divOverlay.appendChild(h3Overlay);
+                    divOverlay.appendChild(pOverlay);
+
                     li.appendChild(divImgbox);
 
                     divAvatar.appendChild(imgAvatar);
@@ -94,11 +104,40 @@ fetch("https://picsum.photos/v2/list?page=2&limit=26")
                     li.appendChild(divInfo);
 
                     ul.appendChild(li);
+
+
+
+                    // 函数生成随机 Lorem Ipsum 文本
+                    function generateLorem() {
+                        const lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+                        const words = lorem.split(' ');
+                        const randomLorem = [];
+                        const wordCount = 20; // 生成20个单词的文本
+
+                        for (let i = 0; i < wordCount; i++) {
+                            randomLorem.push(words[Math.floor(Math.random() * words.length)]);
+                        }
+                        return randomLorem.join(' ');
+                    }
+
+                    // 设置事件监听器，当鼠标悬停在 p 标签上时触发
+                    document.querySelectorAll('.overlay p').forEach(p => {
+                        p.textContent = generateLorem(); // 在鼠标悬停时生成并设置文本
+                    });
+                    
+
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.querySelectorAll('.overlay p').forEach(p => {
+                            p.addEventListener('mouseover', () => {
+                                p.textContent = generateLorem(); // 在鼠标悬停时生成并设置文本
+                            });
+                        });
+                    });
                 });
             })
-            .catch(error => alert("Error loading user data: " + error));
+            .catch(error => alert("Please refresh the broswer"));
     })
-    .catch(error => alert("Error loading image data: " + error));
+    .catch(error => alert("Please refresh the broswer"));
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -121,7 +160,35 @@ document.addEventListener('scroll', () => {
             img.style.transform = 'translateY(0)';
         } else {
             img.style.opacity = 0;
-            img.style.transform = 'translateY(200px)';
+            img.style.transform = 'translateY(100px)';
         }
     });
 });
+
+// // 函数生成随机 Lorem Ipsum 文本
+// function generateLorem() {
+//     const lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+//     const words = lorem.split(' ');
+//     const randomLorem = [];
+//     const wordCount = 20; // 生成20个单词的文本
+
+//     for (let i = 0; i < wordCount; i++) {
+//         randomLorem.push(words[Math.floor(Math.random() * words.length)]);
+//     }
+//     return randomLorem.join(' ');
+// }
+
+// // 设置事件监听器，当鼠标悬停在 p 标签上时触发
+// document.querySelectorAll('.overlay p').forEach(p => {
+//     p.addEventListener('mouseover', () => {
+//         p.textContent = generateLorem(); // 在鼠标悬停时生成并设置文本
+//     });
+// });
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     document.querySelectorAll('.overlay p').forEach(p => {
+//         p.addEventListener('mouseover', () => {
+//             p.textContent = generateLorem(); // 在鼠标悬停时生成并设置文本
+//         });
+//     });
+// });

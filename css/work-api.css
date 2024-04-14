@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(../scss/template.scss);
 * {
   box-sizing: border-box;
@@ -17,6 +18,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.nav-api .logo {
+  width: 150px;
 }
 .nav-api ul {
   display: flex;
@@ -117,21 +121,59 @@
 #fetch li {
   width: 400px;
   height: 300px;
-  margin: 30px;
+  margin: 40px 30px;
   list-style: none;
 }
 #fetch li .imgbox {
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
   height: inherit;
   width: inherit;
   overflow: hidden;
   border-radius: 10px;
+  position: relative;
+}
+#fetch li .imgbox:hover {
+  transform: scale(1.05);
+}
+#fetch li .imgbox .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* 初始透明 */
+  color: transparent;
+  transition: all 0.3s ease;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* 初始设置文字不可见 */
+  text-align: center;
+}
+#fetch li .imgbox .overlay h3 {
+  font-size: 30px;
+  padding-bottom: 10px;
+  color: rgba(255, 255, 255, 0.8);
+}
+#fetch li .imgbox .overlay p {
+  color: rgba(255, 255, 255, 0.8);
 }
 #fetch li .imgbox img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 1s ease-out;
-  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  transform: translateY(100px);
+}
+#fetch li .imgbox:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* 悬停时变半透明 */
+  color: white;
+  opacity: 1;
 }
 #fetch li .info {
   display: flex;
@@ -143,7 +185,7 @@
   height: 40px;
   width: 40px;
   overflow: hidden;
-  margin: 5px;
+  margin-top: 10px;
 }
 #fetch li .info .avatar img {
   height: 100%;
@@ -179,11 +221,15 @@
 }
 
 .footer {
-  height: 300px;
+  height: 800px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 .footer button {
+  width: 300px;
   font-size: 18px;
   border: none;
   height: 40px;
@@ -195,6 +241,37 @@
 .footer button:hover {
   background-color: rgb(232, 135, 7);
   color: white;
+}
+.footer .slogan {
+  width: 100%;
+  height: 800px;
+  background-color: rgb(232, 135, 7);
+  margin-top: 150px;
+  padding: 150px 20px;
+}
+.footer .slogan h1 {
+  padding-bottom: 20px;
+}
+.footer .slogan p {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.footer .slogan h1, .footer .slogan p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 25px;
+}
+.footer .slogan #startBtn {
+  border: none;
+  border-radius: 40px;
+  width: 280px;
+  font-size: 20px;
+  background-color: white;
+  color: rgb(232, 135, 7);
+  margin-top: 100px;
+  transition: all 0.2s ease;
+}
+.footer .slogan #startBtn:hover {
+  transform: scale(1.05);
 }
 
 /*# sourceMappingURL=work-api.css.map */
