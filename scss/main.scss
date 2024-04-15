@@ -28,7 +28,7 @@ $lineColor: rgba(0, 0, 0, 0.7);
 @mixin fontP {
   font-family: "Rubik", sans-serif;
   padding: 10px 0;
-  line-height: 20px;
+  line-height: 25px;
   color: rgba(0, 0, 0, 0.6);
 }
 @mixin fontTitle {
@@ -197,7 +197,12 @@ $lineColor: rgba(0, 0, 0, 0.7);
     font-size: 30px;
     margin-right: 15px;
 
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.6);
+
+    &:hover{
+      color: white;
+    }
+
   }
   .adobe {
     letter-spacing: 0px;
@@ -274,7 +279,7 @@ $lineColor: rgba(0, 0, 0, 0.7);
   .alpha {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 0;
     left: 0;
@@ -307,6 +312,19 @@ $lineColor: rgba(0, 0, 0, 0.7);
       p {
         @include fontP;
         color: white;
+
+        span{
+          display: inline-block;
+          border: 1px solid white;
+          border-radius: 15px;
+          padding: 1px 10px;
+          margin: 0 5px;
+
+          &:hover{
+            background-color: $mainSection;
+          }
+
+        }
       }
     }
   }

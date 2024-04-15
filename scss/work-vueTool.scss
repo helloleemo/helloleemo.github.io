@@ -1,0 +1,32 @@
+
+
+
+@mixin btnInit{
+    border: 0;
+    padding:10px 20px;
+}
+@mixin liInit{
+    list-style: none;
+}
+
+.sidebar a{
+    color: rgba(0, 0, 0, 0.0);
+
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btnStartStyle{
+    @include btnInit;
+    color:aliceblue;
+    background-color: black;
+
+}
+.btnSplitStyle{
+    @include btnInit;
+    color:aliceblue;
+    background-color: red;
+}

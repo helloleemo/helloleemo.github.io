@@ -24,6 +24,20 @@
 // })
 
 
+// ---------------
+// loading動畫
+// ---------------
+
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        var loader = document.querySelector('.loading');
+        if (loader) {
+            loader.style.animation = 'slideOutUp .5s forwards';
+        }
+    }, 3000); 
+});
+
+
 
 // ---------------
 // fetch資料
@@ -31,11 +45,11 @@
 
 const ul = document.querySelector("#fetch");
 
-// 获取图片数据
+// picsum的圖片
 fetch("https://picsum.photos/v2/list?page=2&limit=26")
     .then(res => res.json())
     .then(images => {
-        // 获取用户数据
+        // 使用者
         fetch("https://randomuser.me/api/?results=26")
             .then(res => res.json())
             .then(users => {
@@ -107,7 +121,7 @@ fetch("https://picsum.photos/v2/list?page=2&limit=26")
 
 
 
-                    // 函数生成随机 Lorem Ipsum 文本
+                    // lorem
                     function generateLorem() {
                         const lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
                         const words = lorem.split(' ');
@@ -120,7 +134,7 @@ fetch("https://picsum.photos/v2/list?page=2&limit=26")
                         return randomLorem.join(' ');
                     }
 
-                    // 设置事件监听器，当鼠标悬停在 p 标签上时触发
+                    // lorem介紹
                     document.querySelectorAll('.overlay p').forEach(p => {
                         p.textContent = generateLorem(); // 在鼠标悬停时生成并设置文本
                     });
@@ -137,7 +151,7 @@ fetch("https://picsum.photos/v2/list?page=2&limit=26")
             })
             .catch(error => alert("Please refresh the broswer"));
     })
-    .catch(error => alert("Please refresh the broswer"));
+    .catch(error => alert("Please refresh your browser."));
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -192,3 +206,5 @@ document.addEventListener('scroll', () => {
 //         });
 //     });
 // });
+
+

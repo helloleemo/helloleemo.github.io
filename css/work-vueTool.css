@@ -1,0 +1,24 @@
+.sidebar a {
+  color: rgba(0, 0, 0, 0);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btnStartStyle {
+  border: 0;
+  padding: 10px 20px;
+  color: aliceblue;
+  background-color: black;
+}
+
+.btnSplitStyle {
+  border: 0;
+  padding: 10px 20px;
+  color: aliceblue;
+  background-color: red;
+}
+
+/*# sourceMappingURL=work-vueTool.css.map */
