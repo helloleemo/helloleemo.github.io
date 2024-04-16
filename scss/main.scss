@@ -158,7 +158,8 @@ $lineColor: rgba(0, 0, 0, 0.7);
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      -o-object-fit: cover;
+         object-fit: cover;
     }
   }
   .intro {
@@ -193,6 +194,13 @@ $lineColor: rgba(0, 0, 0, 0.7);
 //icons
 .icons {
   padding-top: 10px;
+  i{
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    &:hover{
+      color: white;
+    }
+  }
   .fa-brands {
     font-size: 30px;
     margin-right: 15px;
@@ -331,7 +339,8 @@ $lineColor: rgba(0, 0, 0, 0.7);
   .working {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 
     transition: transform 0.3s ease;
   }

@@ -21,6 +21,7 @@
     <!-- imported style -->
     <!-- Custom Style -->
     <link rel="stylesheet" href="css/template.css" />
+    <link rel="stylesheet" href="css/work-vueTomato.css">
     <!-- js -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/sticky-sidebar/3.3.1/sticky-sidebar.min.js"
@@ -36,70 +37,51 @@
     <script src="js/template.js" defer></script>
 
 
-    <link rel="stylesheet" href="css/work-vueTomato.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
     <script src="js/work-vueTomato.js" defer></script>
 
 </head>
 
-    <div class="wrapper-sidebar">
-      <div class="sidebar">
-        <a href="">
-          <h3>
-            <i class="fa-solid fa-arrow-left" fa-bounce></i>
-            back to WorkStation
-          </h3>
-        </a>
-        <ul>
-          <li><i class="fa-solid fa-gear" v-on:lick="togglePopup"></i></li>
-        </ul>
-      </div>
-    </div>
-
- 
-<div class="cover" v-show="showPopup"></div>
-<div id="app">
-    <div class="wrapper-tomato">
-        <div class="container">
-            <div class="tomato">
-
-                <div class="title">
-                    <h1>POMOTORO</h1>
-                    <p></p>
-                </div>
-                <div class="timer">
-                    <span class="min">{{min}}:</span>
-                    <span class="sec">{{sec}}</span>
-                </div>
-                <div class="btns">
-                    <div v-on:click="btnTimer" v-bind:class="btnStyle">
-                        <i v-if="btnText ==='Start'" class="fa-solid fa-play"></i>
-                        <i v-else class="fa-solid fa-pause"></i>
-                    </div>
-                </div>
-                
-                <button v-show="skip" v-on:click="skipTimer">
-                    <i class="fa-solid fa-forward"></i>
-                </button>
-                
-                <div v-for="tmt in tmts"><i class="fa-solid" v-bind:class="tmt.icon"></i></div>
-
-                <div @click="applyNewTimes">
-                    
-                    <div class="popup" v-show="showPopup">
-                        <button class="close" v-onclick="closePopup">x</button>
-                        <h2>Set time range</h2>
-                        <input type="text" v-model="inputWorkTime" placeholder="Set focus time (min)">
-                        <input type="text" v-model="inputBreakTime" placeholder="Set rest time (min)">
-                        <button class="change" v-onclick="applyNewTimes">Change</button>
-                    </div>
-                </div>
-
-            </div>
-
+<body>
+  <div id="app">
+    <div class="bgc" v-bind:class="bgc" >
+        <div class="wrapper-sidebar">
+          <div class="sidebar">
+            <a href="index.html">
+              <h3>
+                <i class="fa-solid fa-arrow-left" fa-bounce></i>
+                back to WorkStation
+              </h3>
+            </a>
+            <ul>
+              <li><button @click="toggle"><i class="fa-solid fa-gear"></i></button></li>
+            </ul>
+          </div>
         </div>
-    </div>
-</div>
+      
+        <div class="cover" v-show="settings"></div>
+        <div class="container">
+          <h1>POMODORO</h1>
+          <div class="timer">
+              {{ formattedTime }}
+          </div>
+          <div class="timerBtn">
+            <button v-if="!timerRunning"@click="startTimer" ><i class="fa-solid fa-play" v-bind:class="bgcBtn"></i></button>
+            <button v-else @click="stopTimer" v-bind:class="bgcBtn"><i class="fa-solid fa-pause"></i><button>
+            <button class="skipBtn" v-show="stopTimer"v-if="!timerRunning"@click="skipCurrentPhase">Skip</button>
+          </div>
+          <div class="settings" v-show="settings">
+            <button class="close" @click="toggle">X</button>
+            <h2>Settings</h2>
+            <input type="number" v-model="tempWorkTime" min="1">
+            <label>Set focus time (min)</label>
+            <input type="number" v-model="tempBreakTime" min="1">
+            <label> Set rest time (min)</label>
+            <button class="change" @click="settingTime">Change</button>
+          </div>
+        </div>
+      </div>
+  </div>
 
 
 </body>
