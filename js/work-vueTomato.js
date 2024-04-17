@@ -1,110 +1,119 @@
 const { createApp } = Vue;
 
+
 const app = createApp({
-    data(){
-        return{
-            min:"25",
-            sec:"00",
-            
-            btnStyle:"btnStartStyle btn",
-            btnText:"Start",
-            
-            timer:null,
-            secondsLeft:1500,
-            breakSecondLeft:300,
-            period:25,
-            break:5,
+    data() {
+        return {
+            bgc:"focusColor",
+            bgcBtn:"bgcBtnFocus",
+            isHovered:false,
 
-            tmts:[],
+            workTime: 25,  
+            breakTime: 5,  
+            tempWorkTime: 25,
+            tempBreakTime: 5,
 
-            showPopup: false,
+            secondsLeft: 0,
+            timerRunning: false,
+            onBreak: false,
 
-            inputWorkTime: 25,
-            inputBreakTime: 5,
+            settings:false,
+
+            intervalId: null,
 
 
+        };
+    },
+    mounted(){
+        this.secondsLeft = this.workTime * 60;
+    },
+    computed: {
+        formattedTime() {
+            let minutes = Math.floor(this.secondsLeft / 60);
+            let seconds = this.secondsLeft % 60;
+            return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
         }
     },
-    methods:{
-        btnTimer(){
-            if (this.btnText == "Start"){
-                this.startTimer();
-                this.btnText = "Pause";
-                this.btnStyle = "btnPauseStyle btn";
-                this.skip = false;
-            } else if (this.btnText ==="Pause"){
-                this.pauseTimer();
-                this.btnText = "Start";
-                this.btnStyle = "btnStartStyle btn";
-                this.skip = ture;
+    methods: {
+        startTimer() {
+            
+            if (this.bgc === "focusColor"){
+                this.bgcBtn = "bgcBtnFocus";
+                this.bgc = "focusColor";
+            } else{
+                this.bgc = "breakColor";
+                this.bgcBtn = "bgcBtnBreak";
+            };
 
+            if (!this.timerRunning) {
+                if (this.secondsLeft === 0) {
+                    this.secondsLeft = this.onBreak ? this.breakTime * 60 : this.workTime * 60;
+                }
+                this.timerRunning = true;
+                this.countDown();
             }
         },
-        startTimer(){
-            this.secondsLeft = this.period * 60;
-            this.timer = setInterval(()=>{
+        countDown() {
+            clearInterval(this.intervalId); 
+            this.intervalId = setInterval(() => {
                 if (this.secondsLeft > 0) {
                     this.secondsLeft--;
-                    this.updateTime();
                 } else {
-                    alert("You've had Tomato!");
-                    this.tmts.push({icon:"fa-circle"})
-                    this.breakTimer();
+                    clearInterval(this.intervalId);
+                    if (!this.onBreak) {
+                        alert("You've had a tomato!");
+                        this.startBreak();
+                    } else {
+                        alert("Keep Going!");
+                        this.startTimer();
+                    }
                 }
-            },1000);
+            }, 1000);
         },
-        breakTimer() {
-            this.breakSecondLeft = this.break * 60;
-            clearInterval(this.timer);
-            this.timer = setInterval(()=>{
-                if (this.breakSecondLeft > 0) {
-                    this.secondsLeft--;
-                    this.updateTime();
+        startBreak() {
+            this.bgc = "breakColor";
+            this.bgcBtn = "bgcBtnBreak";
+            this.onBreak = true;
+            this.secondsLeft = this.breakTime * 60;
+            this.timerRunning = true;
+            this.countDown();
+        },
+        stopTimer() {
+            this.bgc = "stopColor";
+            this.bgcBtn = "bgcBtnStop";
 
-                } else {
-                    alert("Keep going!");
-                    this.startTimer();
-                }
-            },1000)            
+
+            this.timerRunning = false;
+            clearInterval(this.intervalId); 
         },
-        pauseTimer(){
-            clearInterval(this.timer); 
+        toggle(){
+            this.settings = !this.settings;
         },
-        skipTimer() {
-            clearInterval(this.timer);
-            if (this.btnText === "Start" && this.skip) {
-                this.startTimer();
+        settingTime(){
+            this.workTime = this.tempWorkTime;
+            this.breakTime = this.tempBreakTime;
+            this.settings = false;
+            clearInterval(this.intervalId); 
+            this.secondsLeft = this.onBreak ? this.breakTime * 60 : this.workTime * 60;
+            this.timerRunning = false; 
+        },
+        skipCurrentPhase() {
+            this.stopTimer();
+            if (!this.onBreak) {
+                
+                this.onBreak = true;
+                this.secondsLeft = this.breakTime * 60;
+                this.bgc = "breakColor";
+                this.bgcBtn = "bgcBtnBreak";
+
             } else {
-                this.breakTimer();
+                this.bgc = "focusColor";
+                this.bgcBtn = "bgcBtnFocus";
+
+    
+                this.onBreak = false;
+                this.secondsLeft = this.workTime * 60;
             }
-            this.skip = false;
-        },
-
-        updateTime() {
-            if (this.btnText === "Pause") { // In a work session
-                this.min = Math.floor(this.secondsLeft / 60);
-                this.sec = this.secondsLeft % 60;
-            } else { // In a break session
-                this.min = Math.floor(this.breakSecondLeft / 60);
-                this.sec = this.breakSecondLeft % 60;
-            }
-            this.min = this.min < 10 ? `0${this.min}` : this.min;
-            this.sec = this.sec < 10 ? `0${this.sec}` : this.sec;
-        },
-        applyNewTimes() {
-            this.period = this.inputWorkTime;
-            this.break = this.inputBreakTime;
-            this.startTimer();
-        },
-        togglePopup() {
-        this.showPopup = !this.showPopup;
-        },
-        closePopup() {
-        this.showPopup = false;
-    },
-
-
-
+        }
     }
-})
-app.mount("#app")
+}).mount('#app');
