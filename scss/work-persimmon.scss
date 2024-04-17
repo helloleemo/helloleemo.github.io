@@ -1,0 +1,355 @@
+
+@mixin h1Style {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 60px;
+    color: rgba(0, 0, 0, 0.6);
+}
+@mixin pStyle{
+    padding-top: 10px;
+    font-size: 22px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.4);
+}
+@mixin borderBoxes {border: 10px solid $colorBgc;}
+
+
+$colorBgc:#F8F1E6;
+$colorOrenge:#FF6D00;
+$colorCoffee:#A05C2D;
+$colorGreen:#7D7233;
+$colorLightGeen:#9E977A;
+$colorBlack:#222222;
+
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+
+}
+
+.scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s .3s ease;
+}
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.wrapper-persimmon{
+    background-color: #F8F1E6;
+    padding-top: 200px;
+    .container{
+        max-width: 1200px;
+        padding-bottom: 250px;
+
+        .imgbox{
+            text-align: center;
+            img{
+                width: 450px;
+            }
+        }
+        .plette{
+            padding-top: 150px;
+            display: flex;
+            justify-content: space-around;
+            
+            li{
+                list-style: none;
+                padding:0px 10px;
+            }
+            .color{
+                width: 150px;
+                height: 60px;
+                
+                &:hover .text{
+                    opacity: 1;
+                }
+
+                .text{
+                    color:rgba(255, 255, 255, 0.6);
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 30px;
+                    opacity: 0; 
+
+                    transition: all 0.3s ease;
+                }
+
+
+            }
+            .pattern1{background-color:#FF6D00 ;}
+            .pattern2{background-color:#A05C2D ;}
+            .pattern3{background-color:#7D7233 ;}
+            .pattern4{background-color:#9E977A ;}
+            .pattern5{background-color:#222222 ;}
+
+
+
+        }
+    }
+    .mainSection{
+        .cover{
+            width: 100%;
+            height: 20px;
+            background-color: #222222;
+            position: relative;
+        }
+
+        .mainImg{
+            width: 100%;
+            height: 60vh;
+            border-top:20px solid black;
+            border-bottom: 20px solid black;
+
+            overflow: hidden;
+            position: relative;
+
+            .alpha{
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left:0;
+                background-color: rgba(0, 0, 0, 0.5);
+                position: absolute;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .imgbox{
+                z-index: 2;
+                width: 350px;
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                .logoWhite{
+                    width: 100%;
+                    height: 100%;
+                    
+                }
+            }    
+        }
+        
+    }
+    .info{        
+        .info1{
+            max-width: 1200px;
+            margin: 0 auto;
+
+            padding: 150px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            .imgbox{
+                width: 550px;
+                height: 350px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .text{
+                width: 50%;
+                padding-left:30px;
+
+                h1{@include h1Style;}
+                p{@include pStyle;}
+            }
+        }
+        .info2{
+            background-color:$colorLightGeen;
+            padding: 150px 20px;
+            
+            
+            .container{
+                max-width: 1200px;
+                margin: 0 auto;
+
+                display:flex;
+                padding: 0 20px;            
+
+                flex-wrap: wrap;
+                justify-content: center;
+                .text{
+                    width: 50%;
+                    padding-left:30px;
+                    h1{
+                        @include h1Style;
+                        color: rgba(255, 255, 255, 0.8);
+
+                    }
+                    p{
+                        @include pStyle;
+                        color: rgba(255, 255, 255, 0.8);
+
+                    }
+                }
+                .imgbox{
+                    width: 550px;
+                    height: 350px;
+                    overflow: hidden;
+                    img{
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                }
+            }
+        }   
+
+    }
+    .colorBoxes{
+        @include borderBoxes;
+        display: flex;
+        flex-wrap: wrap;
+        .img01{
+            @include borderBoxes;
+
+            background-color: $colorCoffee;
+            width: 50%;
+            height: 250px;
+            text-align: right;
+            padding: 20px;
+
+            
+            h1{
+                @include h1Style();
+                font-size: 40px;
+                color:rgba(255, 255, 255, 0.8);
+                line-height: 50px;
+            }
+        }
+        .img02{
+            @include borderBoxes;
+            width: 50%;
+            height: 800px;
+            img{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .img03{
+            @include borderBoxes;
+            margin-top: -550px;
+            width: 50%;
+            height: 650px;
+            img{
+                object-fit:cover;
+                object-position:50% 90% ;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .img04{
+            @include borderBoxes;
+            background-color: $colorOrenge;
+            width: 50%;
+            height: 800px;
+            img{
+                object-fit: cover;
+                object-position: 50% 60%;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .img05{
+            @include borderBoxes;
+            background-color: $colorLightGeen;
+            margin-top: -700px;
+            width: 50%;
+            height: 350px;
+
+            padding: 50px;
+            text-align: right;
+            h1{
+                @include h1Style();
+                font-size: 40px;
+                color:rgba(255, 255, 255, 0.8);
+                line-height: 50px;
+            }
+        }
+        .img06{
+            @include borderBoxes;
+
+            margin-top: -350px;
+            margin-left:-50%;;
+            width: 50%;
+            height: 350px;
+            img{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+    }
+    .section02{
+        text-align: center;
+        margin: 0 auto;
+        padding: 150px 20px;
+        max-width:800px;
+
+        h1{@include h1Style()};
+        p{@include pStyle()};
+
+    }
+    .bottomImg{
+        display: flex;
+        width: 100%;
+        height: 500px;
+        position: relative;
+        button{
+            z-index: 1;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+
+            border: none;
+            border-radius: 100px;
+            width: 200px;
+            height: 80px;
+            font-size: 25px;
+            font-weight: 500;
+
+            background-color: white;
+            color: $colorOrenge;
+
+            transition: all .3 ease;
+            &:hover{
+                background-color:$colorOrenge;
+                color:white
+            }
+        }
+
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        .alpha{
+            width: 100%;
+            height: 500px;
+            background-color: rgba(0, 0, 0, 0.7);
+
+            position: absolute;
+        }
+    }
+
+
+    
+}

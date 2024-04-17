@@ -201,9 +201,13 @@ $lineColor: rgba(0, 0, 0, 0.7);
       color: white;
     }
   }
+  .fa-figma{
+    height: 15px;
+  }
   .fa-brands {
     font-size: 30px;
     margin-right: 15px;
+    margin-top: 10px;
 
     color: rgba(255, 255, 255, 0.6);
 
@@ -214,17 +218,20 @@ $lineColor: rgba(0, 0, 0, 0.7);
   }
   .adobe {
     letter-spacing: 0px;
-    padding: 3px;
+    padding: 5px;
     margin-right: 15px;
 
     font-weight: 500;
+    font-size: 18px;
 
-    background-color: black;
-    color: #e8e470;
+    background-color:rgba(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.7);
 
     display: inline-block;
-    border: 1px solid black;
     border-radius: 5px;
+      &:hover{
+      background-color:rgba(255, 255, 255, 1);
+    }
   }
 }
 

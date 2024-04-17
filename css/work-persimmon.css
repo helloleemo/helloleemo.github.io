@@ -1,0 +1,335 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s 0.3s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wrapper-persimmon {
+  background-color: #F8F1E6;
+  padding-top: 200px;
+}
+.wrapper-persimmon .container {
+  max-width: 1200px;
+  padding-bottom: 250px;
+}
+.wrapper-persimmon .container .imgbox {
+  text-align: center;
+}
+.wrapper-persimmon .container .imgbox img {
+  width: 450px;
+}
+.wrapper-persimmon .container .plette {
+  padding-top: 150px;
+  display: flex;
+  justify-content: space-around;
+}
+.wrapper-persimmon .container .plette li {
+  list-style: none;
+  padding: 0px 10px;
+}
+.wrapper-persimmon .container .plette .color {
+  width: 150px;
+  height: 60px;
+}
+.wrapper-persimmon .container .plette .color:hover .text {
+  opacity: 1;
+}
+.wrapper-persimmon .container .plette .color .text {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.wrapper-persimmon .container .plette .pattern1 {
+  background-color: #FF6D00;
+}
+.wrapper-persimmon .container .plette .pattern2 {
+  background-color: #A05C2D;
+}
+.wrapper-persimmon .container .plette .pattern3 {
+  background-color: #7D7233;
+}
+.wrapper-persimmon .container .plette .pattern4 {
+  background-color: #9E977A;
+}
+.wrapper-persimmon .container .plette .pattern5 {
+  background-color: #222222;
+}
+.wrapper-persimmon .mainSection .cover {
+  width: 100%;
+  height: 20px;
+  background-color: #222222;
+  position: relative;
+}
+.wrapper-persimmon .mainSection .mainImg {
+  width: 100%;
+  height: 60vh;
+  border-top: 20px solid black;
+  border-bottom: 20px solid black;
+  overflow: hidden;
+  position: relative;
+}
+.wrapper-persimmon .mainSection .mainImg .alpha {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+.wrapper-persimmon .mainSection .mainImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wrapper-persimmon .mainSection .mainImg .imgbox {
+  z-index: 2;
+  width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper-persimmon .mainSection .mainImg .imgbox .logoWhite {
+  width: 100%;
+  height: 100%;
+}
+.wrapper-persimmon .info .info1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 150px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.wrapper-persimmon .info .info1 .imgbox {
+  width: 550px;
+  height: 350px;
+  overflow: hidden;
+}
+.wrapper-persimmon .info .info1 .imgbox img {
+  width: 100%;
+  object-fit: cover;
+}
+.wrapper-persimmon .info .info1 .text {
+  width: 50%;
+  padding-left: 30px;
+}
+.wrapper-persimmon .info .info1 .text h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 60px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.wrapper-persimmon .info .info1 .text p {
+  padding-top: 10px;
+  font-size: 22px;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.wrapper-persimmon .info .info2 {
+  background-color: #9E977A;
+  padding: 150px 20px;
+}
+.wrapper-persimmon .info .info2 .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.wrapper-persimmon .info .info2 .container .text {
+  width: 50%;
+  padding-left: 30px;
+}
+.wrapper-persimmon .info .info2 .container .text h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 60px;
+  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.8);
+}
+.wrapper-persimmon .info .info2 .container .text p {
+  padding-top: 10px;
+  font-size: 22px;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.8);
+}
+.wrapper-persimmon .info .info2 .container .imgbox {
+  width: 550px;
+  height: 350px;
+  overflow: hidden;
+}
+.wrapper-persimmon .info .info2 .container .imgbox img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.wrapper-persimmon .colorBoxes {
+  border: 10px solid #F8F1E6;
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrapper-persimmon .colorBoxes .img01 {
+  border: 10px solid #F8F1E6;
+  background-color: #A05C2D;
+  width: 50%;
+  height: 250px;
+  text-align: right;
+  padding: 20px;
+}
+.wrapper-persimmon .colorBoxes .img01 h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 60px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 50px;
+}
+.wrapper-persimmon .colorBoxes .img02 {
+  border: 10px solid #F8F1E6;
+  width: 50%;
+  height: 800px;
+}
+.wrapper-persimmon .colorBoxes .img02 img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.wrapper-persimmon .colorBoxes .img03 {
+  border: 10px solid #F8F1E6;
+  margin-top: -550px;
+  width: 50%;
+  height: 650px;
+}
+.wrapper-persimmon .colorBoxes .img03 img {
+  object-fit: cover;
+  object-position: 50% 90%;
+  width: 100%;
+  height: 100%;
+}
+.wrapper-persimmon .colorBoxes .img04 {
+  border: 10px solid #F8F1E6;
+  background-color: #FF6D00;
+  width: 50%;
+  height: 800px;
+}
+.wrapper-persimmon .colorBoxes .img04 img {
+  object-fit: cover;
+  object-position: 50% 60%;
+  width: 100%;
+  height: 100%;
+}
+.wrapper-persimmon .colorBoxes .img05 {
+  border: 10px solid #F8F1E6;
+  background-color: #9E977A;
+  margin-top: -700px;
+  width: 50%;
+  height: 350px;
+  padding: 50px;
+  text-align: right;
+}
+.wrapper-persimmon .colorBoxes .img05 h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 60px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 50px;
+}
+.wrapper-persimmon .colorBoxes .img06 {
+  border: 10px solid #F8F1E6;
+  margin-top: -350px;
+  margin-left: -50%;
+  width: 50%;
+  height: 350px;
+}
+.wrapper-persimmon .colorBoxes .img06 img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.wrapper-persimmon .section02 {
+  text-align: center;
+  margin: 0 auto;
+  padding: 150px 20px;
+  max-width: 800px;
+}
+.wrapper-persimmon .section02 h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 60px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.wrapper-persimmon .section02 p {
+  padding-top: 10px;
+  font-size: 22px;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.wrapper-persimmon .bottomImg {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+.wrapper-persimmon .bottomImg button {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 100px;
+  width: 200px;
+  height: 80px;
+  font-size: 25px;
+  font-weight: 500;
+  background-color: white;
+  color: #FF6D00;
+  transition: all 0.3 ease;
+}
+.wrapper-persimmon .bottomImg button:hover {
+  background-color: #FF6D00;
+  color: white;
+}
+.wrapper-persimmon .bottomImg img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.wrapper-persimmon .bottomImg .alpha {
+  width: 100%;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+}
+
+/*# sourceMappingURL=work-persimmon.css.map */
