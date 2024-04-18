@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work Station</title>
-    <!-- GOOGLE FONT -->
+
+        <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Rubik -->
@@ -17,10 +18,13 @@
       href="https://fonts.googleapis.com/css2?family=Anton&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inconsolata:wght@200..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Maven+Pro:wght@400..900&family=Reddit+Mono:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <!-- imported style -->
+    <!-- Jersey 10 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inconsolata:wght@200..900&family=Jersey+10&family=Jersey+25&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lobster&family=Maven+Pro:wght@400..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Reddit+Mono:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">    <!-- imported style -->
     <!-- Custom Style -->
     <link rel="stylesheet" href="css/template.css" />
-    <link rel="stylesheet" href="css/work-vueTomato.css">
+    <link rel="stylesheet" href="css/work-todolist.css">
     <!-- js -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/sticky-sidebar/3.3.1/sticky-sidebar.min.js"
@@ -32,19 +36,14 @@
       defer
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/@mojs/core" defer></script>
-    <script src="node_modules/animejs/lib/anime.min.js" defer></script>
     <script src="js/template.js" defer></script>
 
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
-    <script src="js/work-vueTomato.js" defer></script>
-
+    <script src="js/work-todolist.js" defer></script>
 </head>
-
 <body>
-  <div id="app">
-    <div class="bgc" v-bind:class="bgc" >
-        <div class="wrapper-sidebar">
+    <div class="wrapper-sidebar">
           <div class="sidebar">
             <a href="index.html">
               <h3>
@@ -53,34 +52,34 @@
               </h3>
             </a>
             <ul>
-              <li><button @click="toggle"><i class="fa-solid fa-gear"></i></button></li>
+              <li style="color:white"> .</li>
             </ul>
           </div>
-        </div>
-      
-        <div class="cover" v-show="settings"></div>
-        <div class="container">
-          <h1>POMODORO</h1>
-          <div class="timer">
-              {{ formattedTime }}
-          </div>
-          <div class="timerBtn">
-            <button v-if="!timerRunning"@click="startTimer" ><i class="fa-solid fa-play" v-bind:class="bgcBtn"></i></button>
-            <button v-else @click="stopTimer" v-bind:class="bgcBtn"><i class="fa-solid fa-pause"></i><button>
-            <button class="skipBtn" v-show="stopTimer"v-if="!timerRunning"@click="skipCurrentPhase">Skip</button>
-          </div>
-          <div class="settings" v-show="settings">
-            <button class="close" @click="toggle">X</button>
-            <h2>Settings</h2>
-            <input type="number" v-model="tempWorkTime" min="1">
-            <label>Set focus time (min)</label>
-            <input type="number" v-model="tempBreakTime" min="1">
-            <label> Set rest time (min)</label>
-            <button class="change" @click="settingTime">Change</button>
-          </div>
-        </div>
-      </div>
-  </div>
+    </div>
 
-
+    <div id="app">
+        <div class="wrapper">
+          <div class="container">
+            <div class="content">
+              <h1>To Do List</h1>
+              <div class="input">
+                <div class="outline">
+                  <input v-model="newTodo" @keyup.enter="addTodo" type="text" placeholder="work item..." >
+                  <div @click="changeColorClass" :class="currentColorClass" class="circle"></div>
+                </div>
+                <button @click="addTodo"><i class="fa-solid fa-plus"></i></button>
+              </div>
+              <ul>
+                <li v-for="(todo, index) in todos" :key="index" :class="todo.colorClass">
+                  <i :class="getIconClass(todo)" @click="toggleComplete(index)"></i>
+                  <p>{{ todo.text }}</p>
+                  <i class="fa-solid fa-xmark" @click="removeTodo(index)"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+    
 </body>
+</html>

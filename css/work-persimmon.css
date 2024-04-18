@@ -35,37 +35,46 @@
 }
 .wrapper-persimmon .container .plette li {
   list-style: none;
-  padding: 0px 10px;
+  padding-top: 15px;
+  padding-left: 10px;
 }
 .wrapper-persimmon .container .plette .color {
   width: 150px;
   height: 60px;
 }
-.wrapper-persimmon .container .plette .color:hover .text {
-  opacity: 1;
+.wrapper-persimmon .container .plette .color h3 {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  padding-bottom: 25px;
+  font-weight: 400;
 }
 .wrapper-persimmon .container .plette .color .text {
-  color: rgba(255, 255, 255, 0.6);
-  font-weight: 500;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 400;
   font-size: 16px;
-  line-height: 30px;
-  opacity: 0;
+  line-height: 24px;
+  text-align: left;
   transition: all 0.3s ease;
 }
 .wrapper-persimmon .container .plette .pattern1 {
   background-color: #FF6D00;
+  color: #FF6D00;
 }
 .wrapper-persimmon .container .plette .pattern2 {
   background-color: #A05C2D;
+  color: #A05C2D;
 }
 .wrapper-persimmon .container .plette .pattern3 {
   background-color: #7D7233;
+  color: #7D7233;
 }
 .wrapper-persimmon .container .plette .pattern4 {
   background-color: #9E977A;
+  color: #9E977A;
 }
 .wrapper-persimmon .container .plette .pattern5 {
   background-color: #222222;
+  color: #222222;
 }
 .wrapper-persimmon .mainSection .cover {
   width: 100%;
@@ -134,7 +143,7 @@
   font-size: 50px;
   font-weight: 600;
   line-height: 60px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.8);
 }
 .wrapper-persimmon .info .info1 .text p {
   padding-top: 10px;
@@ -164,15 +173,15 @@
   font-size: 50px;
   font-weight: 600;
   line-height: 60px;
-  color: rgba(0, 0, 0, 0.6);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 .wrapper-persimmon .info .info2 .container .text p {
   padding-top: 10px;
   font-size: 22px;
   line-height: 30px;
   color: rgba(0, 0, 0, 0.4);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 .wrapper-persimmon .info .info2 .container .imgbox {
   width: 550px;
@@ -203,9 +212,9 @@
   font-size: 50px;
   font-weight: 600;
   line-height: 60px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.8);
   font-size: 40px;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
   line-height: 50px;
 }
 .wrapper-persimmon .colorBoxes .img02 {
@@ -257,9 +266,9 @@
   font-size: 50px;
   font-weight: 600;
   line-height: 60px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.8);
   font-size: 40px;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
   line-height: 50px;
 }
 .wrapper-persimmon .colorBoxes .img06 {
@@ -286,7 +295,7 @@
   font-size: 50px;
   font-weight: 600;
   line-height: 60px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.8);
 }
 .wrapper-persimmon .section02 p {
   padding-top: 10px;
