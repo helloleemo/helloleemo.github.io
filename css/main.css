@@ -4,6 +4,7 @@
   margin: 0;
   font-family: "Rubik", sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .container {
@@ -32,7 +33,7 @@
 .navbarItems .logo {
   width: 150px;
   height: 50px;
-  background-color: black;
+  background-color: rgb(176, 109, 109);
 }
 .navbarItems ul {
   display: flex;
@@ -102,7 +103,6 @@
 .about .aboutImg img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
 }
 .about .intro {
@@ -294,6 +294,51 @@
 
 .imgbox:hover .working {
   transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: 100px;
+  }
+  .navbarItems {
+    display: flex;
+    justify-content: center;
+  }
+  .navbarItems .logo {
+    margin-top: 25px;
+  }
+  .navbarItems ul {
+    display: none;
+  }
+}
+.mainSection .title {
+  font-size: 60px;
+}
+.mainSection .subtitle {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+.mainSection .btn {
+  padding: 20px 40px;
+  font-size: 20px;
+}
+
+.about .aboutImg {
+  display: none;
+}
+.about .intro {
+  padding-left: 0px;
+  padding: 0 20px;
+}
+
+.workSection {
+  padding: 20px;
+}
+.workSection .set .tagAll {
+  display: none;
+}
+.workSection .set .imgbox {
+  height: 300px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -5,7 +5,7 @@
     font-size: 50px;
     font-weight: 600;
     line-height: 60px;
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.8);
 }
 @mixin pStyle{
     padding-top: 10px;
@@ -62,33 +62,38 @@ $colorBlack:#222222;
             
             li{
                 list-style: none;
-                padding:0px 10px;
+                padding-top: 15px;
+                padding-left:10px ;
+
             }
             .color{
                 width: 150px;
                 height: 60px;
                 
-                &:hover .text{
-                    opacity: 1;
+                h3{
+                    color:rgba(255, 255, 255, 0.5);
+                    font-size: 20px;
+                    padding-bottom: 25px;
+                    font-weight: 400;
                 }
 
                 .text{
-                    color:rgba(255, 255, 255, 0.6);
-                    font-weight: 500;
+                    color:rgba(0, 0, 0, 0.4);
+                    font-weight: 400;
                     font-size: 16px;
-                    line-height: 30px;
-                    opacity: 0; 
+                    line-height: 24px;
+                    text-align: left;
 
                     transition: all 0.3s ease;
                 }
 
 
             }
-            .pattern1{background-color:#FF6D00 ;}
-            .pattern2{background-color:#A05C2D ;}
-            .pattern3{background-color:#7D7233 ;}
-            .pattern4{background-color:#9E977A ;}
-            .pattern5{background-color:#222222 ;}
+            .pattern1{background-color:#FF6D00 ;color:#FF6D00;}
+            .pattern2{background-color:#A05C2D ;color:#A05C2D;}
+            .pattern3{background-color:#7D7233 ;color:#7D7233;}
+            .pattern4{background-color:#9E977A ;color:#9E977A;}
+            .pattern5{background-color:#222222 ;color:#222222;}
 
 
 
@@ -187,12 +192,12 @@ $colorBlack:#222222;
                     padding-left:30px;
                     h1{
                         @include h1Style;
-                        color: rgba(255, 255, 255, 0.8);
+                        color: rgba(255, 255, 255, 0.9);
 
                     }
                     p{
                         @include pStyle;
-                        color: rgba(255, 255, 255, 0.8);
+                        color: rgba(255, 255, 255, 0.9);
 
                     }
                 }
@@ -228,7 +233,7 @@ $colorBlack:#222222;
             h1{
                 @include h1Style();
                 font-size: 40px;
-                color:rgba(255, 255, 255, 0.8);
+                color:rgba(255, 255, 255, 0.9);
                 line-height: 50px;
             }
         }
@@ -278,7 +283,7 @@ $colorBlack:#222222;
             h1{
                 @include h1Style();
                 font-size: 40px;
-                color:rgba(255, 255, 255, 0.8);
+                color:rgba(255, 255, 255, 0.9);
                 line-height: 50px;
             }
         }
