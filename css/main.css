@@ -150,10 +150,11 @@
   color: white;
 }
 .icons .fa-figma {
-  height: 15px;
+  overflow: hidden;
 }
 .icons .fa-brands {
-  font-size: 30px;
+  overflow: hidden;
+  font-size: 35px;
   margin-right: 15px;
   margin-top: 10px;
   color: rgba(255, 255, 255, 0.6);
@@ -282,7 +283,6 @@
 .imgbox .working {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -310,35 +310,33 @@
   .navbarItems ul {
     display: none;
   }
-}
-.mainSection .title {
-  font-size: 60px;
-}
-.mainSection .subtitle {
-  font-size: 20px;
-  margin-bottom: 50px;
-}
-.mainSection .btn {
-  padding: 20px 40px;
-  font-size: 20px;
-}
-
-.about .aboutImg {
-  display: none;
-}
-.about .intro {
-  padding-left: 0px;
-  padding: 0 20px;
-}
-
-.workSection {
-  padding: 20px;
-}
-.workSection .set .tagAll {
-  display: none;
-}
-.workSection .set .imgbox {
-  height: 300px;
+  .mainSection .title {
+    font-size: 60px;
+  }
+  .mainSection .subtitle {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  .mainSection .btn {
+    padding: 20px 40px;
+    font-size: 20px;
+  }
+  .about .aboutImg {
+    display: none;
+  }
+  .about .intro {
+    padding-left: 0px;
+    padding: 0 20px;
+  }
+  .workSection {
+    padding: 20px;
+  }
+  .workSection .set .tagAll {
+    display: none;
+  }
+  .workSection .set .imgbox {
+    height: 300px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
