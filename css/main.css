@@ -89,16 +89,32 @@
   cursor: pointer;
 }
 
+.carousel01 {
+  width: 100%;
+  height: 50vh;
+  background-color: #2d2d2d;
+}
+
+.carousel02 {
+  width: 100%;
+  height: 50vh;
+  background-color: aqua;
+}
+
+.carousel03 {
+  width: 100%;
+  height: 50vh;
+  background-color: bisque;
+}
+
 .about {
-  height: 100vh;
+  height: 50vh;
   background-color: rgb(255, 236, 126);
   display: flex;
 }
 .about .aboutImg {
   width: 50%;
-  height: 100vh;
   overflow: hidden;
-  flex: 1;
 }
 .about .aboutImg img {
   width: 100%;
@@ -106,7 +122,6 @@
   object-fit: cover;
 }
 .about .intro {
-  flex: 1;
   margin: auto;
   padding-left: 50px;
   line-height: 20px;

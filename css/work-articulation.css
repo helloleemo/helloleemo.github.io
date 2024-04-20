@@ -1,0 +1,254 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 30px;
+  padding-top: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.wrapper-articulation {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+.wrapper-articulation .imgbox {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+}
+.wrapper-articulation .imgbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wrapper-articulation .mainSection {
+  padding-top: 100px;
+  display: flex;
+}
+.wrapper-articulation .mainSection .text {
+  padding-top: 100px;
+  text-align: right;
+  flex: 1;
+}
+.wrapper-articulation .mainSection .text h1 {
+  font-size: 50px;
+  color: white;
+}
+.wrapper-articulation .mainSection .text p {
+  padding-top: 20px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.wrapper-articulation .mainSection .text img {
+  padding-top: 20px;
+  width: 150px;
+}
+.wrapper-articulation .mainSection .phoneImg {
+  width: 450px;
+  height: 100%;
+  margin-top: -60px;
+  flex: 1;
+}
+.wrapper-articulation .mainSection .phoneImg img {
+  width: 100%;
+  height: 100%;
+}
+.wrapper-articulation .introSection {
+  width: 100%;
+  height: 100%;
+}
+.wrapper-articulation .introSection .intro1 .container {
+  display: flex;
+}
+.wrapper-articulation .introSection .intro1 .container .phoneImg {
+  margin-top: -100px;
+  height: 100%;
+  flex: 3;
+}
+.wrapper-articulation .introSection .intro1 .container .phoneImg img {
+  width: 100%;
+  height: 100%;
+}
+.wrapper-articulation .introSection .intro1 .container .text {
+  flex: 5;
+  padding-top: 100px;
+}
+.wrapper-articulation .introSection .intro1 .container .text h2 {
+  font-size: 40px;
+}
+.wrapper-articulation .introSection .intro1 .container .text p {
+  font-size: 18px;
+  line-height: 30px;
+  padding-top: 20px;
+}
+.wrapper-articulation .introSection .intro2 {
+  position: relative;
+}
+.wrapper-articulation .introSection .intro2 .container {
+  display: flex;
+}
+.wrapper-articulation .introSection .intro2 .container .imgBook {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 350px;
+}
+.wrapper-articulation .introSection .intro2 .container .imgBook img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.wrapper-articulation .introSection .intro2 .container .text {
+  padding-top: 380px;
+  text-align: right;
+}
+.wrapper-articulation .introSection .intro2 .container .imgCalendar {
+  width: 120%;
+}
+.wrapper-articulation .introSection .intro2 .container .imgCalendar img {
+  width: 100%;
+  height: 100%;
+}
+.wrapper-articulation .userResearch {
+  background-color: #fff;
+}
+.wrapper-articulation .userResearch .text {
+  text-align: center;
+}
+.wrapper-articulation .userResearch .text h2 {
+  padding-top: 100px;
+}
+.wrapper-articulation .userResearch .text p {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+.wrapper-articulation .userResearch .imgResearch {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.wrapper-articulation .userResearch .imgResearch img {
+  width: 100%;
+  height: 100%;
+}
+.wrapper-articulation .userJourneyMap {
+  background-color: #fff;
+}
+.wrapper-articulation .userJourneyMap .text {
+  text-align: center;
+}
+.wrapper-articulation .userJourneyMap .text h2 {
+  padding-top: 100px;
+}
+.wrapper-articulation .userJourneyMap .text p {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+.wrapper-articulation .userJourneyMap .imgJourneyMap {
+  max-width: 880px;
+  margin: 0 auto;
+}
+.wrapper-articulation .userJourneyMap .imgJourneyMap img {
+  width: 100%;
+  height: 100%;
+}
+.wrapper-articulation .wireFrame {
+  background-color: #fff;
+  padding-bottom: 300px;
+}
+.wrapper-articulation .wireFrame .text {
+  text-align: center;
+}
+.wrapper-articulation .wireFrame .text h2 {
+  padding-top: 100px;
+}
+.wrapper-articulation .wireFrame .text p {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+.wrapper-articulation .wireFrame .imgWireframe {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.wrapper-articulation .wireFrame .imgWireframe img {
+  width: 100%;
+  height: 100%;
+}
+.wrapper-articulation .banner {
+  z-index: -1;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+.wrapper-articulation .banner img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.wrapper-articulation .banner .text {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.wrapper-articulation .banner .text h2 {
+  padding-top: 100px;
+}
+.wrapper-articulation .banner .text p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.wrapper-articulation .cards {
+  background-color: #f1f1f1;
+  padding-bottom: 300px;
+}
+.wrapper-articulation .cards .text {
+  text-align: center;
+}
+.wrapper-articulation .cards .text h2 {
+  padding-top: 100px;
+}
+.wrapper-articulation .cards .text p {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+.wrapper-articulation .cards .imgCards {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 200px;
+}
+.wrapper-articulation .cards .imgCards img {
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=work-articulation.css.map */

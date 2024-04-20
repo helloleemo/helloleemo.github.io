@@ -144,19 +144,20 @@ $lineColor: rgba(0, 0, 0, 0.7);
 // ------------------
 // $About
 // ------------------
-
+.carousel01{width: 100%;height: 50vh;background-color: #2d2d2d;}
+.carousel02{width: 100%;height: 50vh;background-color: aqua;}
+.carousel03{width: 100%;height: 50vh;background-color: bisque;}
 .about {
-  height: 100vh;
+  height: 50vh;
+  // width: 100%;
   background-color: $aboutColor;
 
   display: flex;
 
   .aboutImg {
     width: 50%;
-    height: 100vh;
     overflow: hidden;
 
-    flex: 1;
     img {
       width: 100%;
       height: 100%;
@@ -164,8 +165,6 @@ $lineColor: rgba(0, 0, 0, 0.7);
     }
   }
   .intro {
-    flex: 1;
-
     margin: auto;
     padding-left: 50px;
     line-height: 20px;
@@ -203,10 +202,14 @@ $lineColor: rgba(0, 0, 0, 0.7);
     }
   }
   .fa-figma{
-    height: 15px;
+  overflow: hidden;
+    
+    
   }
   .fa-brands {
-    font-size: 30px;
+    overflow: hidden;
+
+    font-size: 35px;
     margin-right: 15px;
     margin-top: 10px;
 
@@ -347,7 +350,6 @@ $lineColor: rgba(0, 0, 0, 0.7);
   .working {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
        object-fit: cover;
 
     transition: transform 0.3s ease;
@@ -380,7 +382,7 @@ $lineColor: rgba(0, 0, 0, 0.7);
       display:none;
     }
   }
-}
+
 .mainSection{
   .title{font-size: 60px;}
   .subtitle{font-size: 20px;margin-bottom: 50px;}
@@ -396,4 +398,5 @@ $lineColor: rgba(0, 0, 0, 0.7);
     .tagAll{display: none;}
     .imgbox {height: 300px;}
   }
+}
 }

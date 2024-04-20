@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+.wrapper-sakura{
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .mainImg{
+        position: relative;
+        z-index: -1;
+        width: 100%;
+        height: 700px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .awards{
+        display: flex;
+        justify-content: flex-end;
+
+        width: 200px;
+        position:absolute;
+        top:20%;
+        right:20%;        
+        .logo{
+
+            img{
+
+            }
+        }
+        .awardLogo{
+
+            img{
+
+            }
+
+        }
+    }
+}
