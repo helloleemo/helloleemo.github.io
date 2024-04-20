@@ -48,13 +48,16 @@ $(".owl-carousel").owlCarousel();
 
 var owl = $('.owl-carousel');
 owl.owlCarousel({
-    items:4,
+    animateOut: 'fadeOut',
+    items:1,
     loop:true,
-    margin:10,
-    autoplay:true,
-    autoplayTimeout:3000,
+    margin:0,
+    // autoplay:true,
+    // autoplayTimeout:3000,
     autoplayHoverPause:true,
+    // smartSpeed:250,
     autoWidth:true,
+    autoHeight:true,
 });
 $('.play').on('click',function(){
     owl.trigger('play.owl.autoplay',[1000])
@@ -62,3 +65,7 @@ $('.play').on('click',function(){
 $('.stop').on('click',function(){
     owl.trigger('stop.owl.autoplay')
 })
+
+//boostrap輪播
+var myCarousel = document.querySelector('#myCarousel')
+var carousel = new bootstrap.Carousel(myCarousel)

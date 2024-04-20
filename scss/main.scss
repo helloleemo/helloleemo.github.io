@@ -48,7 +48,8 @@ $lineColor: rgba(0, 0, 0, 0.7);
   overflow-x: hidden;
 }
 
-.container {
+
+.mainContainer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
@@ -64,7 +65,7 @@ $lineColor: rgba(0, 0, 0, 0.7);
 // $navbar
 // ------------------
 
-.navbar {
+.mainNavbar {
   background-color: $navColor;
 }
 
@@ -81,14 +82,14 @@ $lineColor: rgba(0, 0, 0, 0.7);
 
   ul {
     display: flex;
-    justify-content: space-between;
-
-    padding-right: -20px;
+    
   }
 
   li {
     list-style: none;
     padding-right: 10px;
+    display: flex;
+    align-items: center;  
     margin: 0 5px;
   }
   a {
@@ -99,6 +100,7 @@ $lineColor: rgba(0, 0, 0, 0.7);
     display: inline-block;
     padding: 10px 15px;
     letter-spacing: 1px;
+    line-height: 50px;
   }
 }
 
@@ -144,52 +146,16 @@ $lineColor: rgba(0, 0, 0, 0.7);
 // ------------------
 // $About
 // ------------------
-.carousel01{width: 100%;height: 50vh;background-color: #2d2d2d;}
-.carousel02{width: 100%;height: 50vh;background-color: aqua;}
-.carousel03{width: 100%;height: 50vh;background-color: bisque;}
-.about {
-  height: 50vh;
-  // width: 100%;
-  background-color: $aboutColor;
-
-  display: flex;
-
-  .aboutImg {
-    width: 50%;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      height: 100%;
+.about{
+  .carousel-item{
+    img{
       object-fit: cover;
-    }
-  }
-  .intro {
-    margin: auto;
-    padding-left: 50px;
-    line-height: 20px;
-    @include fontContent;
-
-    .line {
-      background-color: $lineColor;
-      height: 1px;
-      max-width: 600px;
-      margin: 20px 0;
-      margin-right: 20px;
-    }
-    h1 {
-      @include fontH1;
-    }
-    h3 {
-      @include fontH3;
-    }
-    p {
-      @include fontP;
-      max-width: 620px;
-      padding-right: 20px;
+      object-position: 50% 80%;
+      height: 800px;
     }
   }
 }
+
 
 //icons
 .icons {

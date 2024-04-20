@@ -19,42 +19,45 @@
       rel="stylesheet"
     />
     <!-- imported style -->
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
-    <!-- <link rel="stylesheet" href="css/bootstrap-grid.min.css" /> -->
+    <!-- <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Custom Style -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
     <link rel="stylesheet" href="css/main.css" />
 
     <!-- js -->
     <script src="js/jquery-3.7.1.min.js" defer></script>
-    <script src="js/owl.carousel.min.js"defer></script>
+    <!-- <script src="js/owl.carousel.min.js"defer></script> -->
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
     <script
       src="https://kit.fontawesome.com/9142318aee.js"
       crossorigin="anonymous"
       defer
     ></script>
-    <script src="node_modules/animejs/lib/anime.min.js" defer></script>
+    <!-- <script src="node_modules/animejs/lib/anime.min.js" defer></script> -->
     <script src="js/main.js" defer></script>
   </head>
 
   <body>
-    <div class="wrapper">
-      <div class="navbar">
-        <div class="container">
+    <div class="wrappermain">
+      <div class="mainNavbar">
+        <div class="mainContainer">
           <div class="navbarItems">
             <div class="logoImg">
               <div class="logo"></div>
             </div>
-            <div class="item">
+            <!-- <div class="item"> -->
               <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="#work">WorkStation</a></li>
                 <li><a href="">Contact</a></li>
               </ul>
-            </div>
+            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -65,60 +68,55 @@
           <a href="#work"><button class="btn">Work Station</button></a>
         </div>
       </div>
-      <div class="owl-carousel">
-        <div class="carousel01"> carousel01</div>
+      <!-- -------------- -->
+      <!------- intro ------>
+      <!-- -------------- -->
 
-        <div>
-            <div class="about">
-              <div class="aboutImg">
-                <img src="https://picsum.photos/1250/500" alt="" />
+      <div class="about">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 1"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="src/award01.png" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
               </div>
-              <div class="intro">
-          <h1>Hello</h1>
-          <div class="line"></div>
-          <p>
-            Hello, I am LeeMo, a passionate freelancer from Taipei, Taiwan Lorem
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perferendis, earum. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. In, maiores.ipsum dolorx, sit amet consectetur
-            adipisicing elit. Qui atque cum provident!
-          </p>
-          <h3>Education</h3>
-          <p>
-            2023 | M.S. in Industrial Design | National Cheng Kung University
-            2014 | B.A. in Philosophy and Sociology (Double Major) | Fu Jen
-            Catholic University
-          </p>
-          <h3>Experience</h3>
-          <p>Free Lancer Designer Design Director Graphic Designer</p>
-          <!-- <h3>Skill set</h3>
-          <div class="icons">
-            <p>Coding set</p>
-            <i class="fa-brands fa-html5"> </i>
-            <i class="fa-brands fa-css3-alt"></i>
-            <i class="fa-brands fa-js"></i>
-            <i class="fa-brands fa-vuejs"></i>
-            <i class="fa-brands fa-sass"></i>
-            <i class="fa-brands fa-github"></i>
-            <p>Multiple Media design</p>
-            <i class="fa-brands fa-figma"></i>
-            <div class="adobe">Ai</div>
-            <div class="adobe">Ps</div>
-            <div class="adobe">Ps</div>
-            <div class="adobe">Id</div>
-            <div class="adobe">Ae</div>
-            <div class="adobe">Pr</div>
-            <div class="adobe">Lr</div>
-          </div> -->
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="src/award02.png" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
               </div>
-            </div> 
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="src/award03.png" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="src/award04.png" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>          
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-
-          <div class="carousel02"> Your Content </div>
-          <div class="carousel03"> Your Content </div>
-
       </div>
-      
+
+
+      <!-- -------------- -->
+      <!--- work station --->
+      <!-- -------------- -->
       <div id="work" class="workSection">
         <div class="container">
           <h1>WorkStation</h1>
@@ -289,7 +287,7 @@
                   </div>
                   <img
                     class="working"
-                    src="src/work-articulation00.png"
+                    src="src/work-sakura00.png"
                     alt=""
                   />
                 </div>
@@ -329,3 +327,24 @@
     </div>
   </body>
 </html>
+
+
+<!-- <h3>Skill set</h3>
+<div class="icons">
+  <p>Coding set</p>
+  <i class="fa-brands fa-html5"> </i>
+  <i class="fa-brands fa-css3-alt"></i>
+  <i class="fa-brands fa-js"></i>
+  <i class="fa-brands fa-vuejs"></i>
+  <i class="fa-brands fa-sass"></i>
+  <i class="fa-brands fa-github"></i>
+  <p>Multiple Media design</p>
+  <i class="fa-brands fa-figma"></i>
+  <div class="adobe">Ai</div>
+  <div class="adobe">Ps</div>
+  <div class="adobe">Ps</div>
+  <div class="adobe">Id</div>
+  <div class="adobe">Ae</div>
+  <div class="adobe">Pr</div>
+  <div class="adobe">Lr</div>
+</div> -->
