@@ -1,0 +1,111 @@
+.wrapper-furniture h1 {
+  font-size: 45px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.wrapper-furniture h2 {
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.wrapper-furniture p {
+  font-size: 18px;
+  color: rgb(137, 137, 137);
+  padding-top: 20px;
+  line-height: 30px;
+}
+.wrapper-furniture .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.wrapper-furniture .mainSection {
+  position: relative;
+}
+.wrapper-furniture .mainSection .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  text-align: center;
+}
+.wrapper-furniture .mainSection .text .award {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.wrapper-furniture .mainSection .text .award img {
+  height: 100%;
+  width: 100%;
+}
+.wrapper-furniture .mainSection .text h1 {
+  font-size: 45px;
+}
+.wrapper-furniture .mainSection .text p {
+  padding-top: 20px;
+  line-height: 25px;
+}
+.wrapper-furniture .mainSection .imgbox {
+  width: 100%;
+  height: 600px;
+}
+.wrapper-furniture .mainSection .imgbox img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.wrapper-furniture .intro1 {
+  padding-top: 100px;
+}
+.wrapper-furniture .intro1 .alpha {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: 150px;
+  padding-top: 50px;
+}
+.wrapper-furniture .intro1 .alpha p {
+  color: rgba(0, 0, 0, 0.6);
+}
+.wrapper-furniture .intro1 .text {
+  text-align: center;
+  padding: 100px 0;
+}
+.wrapper-furniture .intro1 .imgbox {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+}
+.wrapper-furniture .intro1 .imgbox img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+.wrapper-furniture .intro1 .img8 {
+  padding-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.wrapper-furniture .intro1 .img8 img {
+  width: 380px;
+  height: 100%;
+  padding: 10px;
+}
+.wrapper-furniture .intro1 .final p {
+  padding-bottom: 100px;
+}
+.wrapper-furniture .intro1 .final .alpha {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.wrapper-furniture .intro1 .final .imgbox {
+  margin: 0 auto;
+  width: 800px;
+  height: 100%;
+  padding-top: 50px;
+}
+.wrapper-furniture .intro1 .final .imgbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=work-kdfurniture.css.map */
