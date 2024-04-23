@@ -1,0 +1,282 @@
+
+
+
+$mainColor:#ffbf2b;
+$mainColor:#FF6A16;
+.wrapper-hpss{
+    h1{
+        font-size: 45px;
+        color:rgba(0, 0, 0,.8);
+
+    }
+    h2{
+        font-size: 35px;
+        color:rgba(0, 0, 0,.8);
+
+    }
+    p{
+        font-size: 18px;
+        color:rgb(137, 137, 137);
+        padding-top: 20px;
+        line-height: 30px;
+    }
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .mainSection{
+        position: relative;
+        .alpha{
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: rgba(0, 0, 0,.6);
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+        .imgbox{
+            width: 100%;
+            height: 600px;
+            img{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .text{
+            z-index: 1;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            h1{
+            color:rgba(255, 255, 255, 0.9);
+            }
+            p{
+            color:rgba(255, 255, 255, 0.6);
+            max-width: 800px;
+            }
+        }
+    }
+    .intro{
+        padding: 100px 0;
+        .section{
+            display:flex;
+            flex-wrap: wrap;
+            align-items: center;
+            .textLeft{
+                flex: 1;
+                text-align: right;
+            }
+            .textRight{
+                flex: 1;
+                text-align: left;
+            }
+            .imgbox{
+                flex: 1;
+
+                width: 100%;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .device{
+                img{
+                    width: 60%;
+                    height: 100%;
+                }
+            }
+
+            
+
+        }
+    }
+    .optimize{
+        background-color: rgba(0, 0, 0, 0.05);
+        width: 100%;
+        height: 100%;
+        padding:150px 0;
+        .text{
+            margin: 0 auto;
+            text-align: center;
+            max-width: 900px;
+        }
+        .optimizeImg{
+            display: flex;
+            justify-content: space-evenly;
+            .imgbox{
+                max-width: 300px;
+                padding:10px;  
+                padding-top: 50px;  
+                overflow: hidden;           
+                img{
+                    border-radius: 20px; 
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+    }
+    .usibilityTest{
+        padding: 100px;
+        .text{
+            margin: 0 auto;
+            text-align: center;
+            max-width: 900px;
+        }
+        .imgbox{
+            display: flex;
+            justify-content: space-evenly;
+            .img{
+                text-align: center;
+                padding:20px;
+                width: 50%;
+                overflow: hidden;
+                
+                img{
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    .testProcess{
+        background-color: rgba(0, 0, 0, 0.05);
+        width: 100%;
+        height: 100%;
+        padding:150px 0;
+        .text{
+            text-align: center;
+            justify-content: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .iconImg{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap:wrap;
+            text-align: center;
+            padding: 50px 20px;
+
+
+            .imgbox{
+                width: 150px;
+                height: 150px;
+                padding: 10px;
+                margin-top:60px;
+
+                border-radius: 75px;
+                background-color: $mainColor;
+            }
+            p{
+                width: 150px;
+                font-size: 24px;
+                padding-top: 50px;
+                padding-bottom: 20px;
+                color:$mainColor;
+            }
+            img{
+                width: 75%;
+                height: 75%;
+                position: relative;
+                top:50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .functionMap{
+        padding: 150px;
+        text-align: center;
+        margin:0 auto;
+
+        .text{
+            padding-bottom: 80px;
+        }
+        .imgbox{
+            max-width: 900px;
+            margin:0 auto;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+            }
+        }
+    }
+    .usibilityTest2{
+        padding-bottom: 150px;
+        .container{
+            padding-top: 100px;
+            display:flex;
+            flex-wrap: wrap;
+            gap:30px;
+        }
+        .text{
+            width: 40%;
+        }
+        .imgbox{
+            width: 40%;
+            padding-top: 50px;
+            padding-left: 50px;
+            img{
+                max-width: 350px;
+            }
+        }
+        .trainingImg{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            img{
+                width: 30%;
+                padding: 10px;
+            }
+        }
+        .historyText{
+            max-width: 30%;
+            img{
+                max-width: 200px;
+            }
+
+        }
+        .historyImg{
+            display: flex;
+            width: 30%;
+            height: 100%;
+            img{
+                width: 100%;
+                padding: 10px;
+            }
+
+        }
+    }
+    .effective{
+        padding:150px 0 ;
+        background-color: rgba(0, 0, 0, 0.03);
+        .textCenter{
+            // margin: 0 auto;
+            h2,p{
+                text-align: center;
+            }
+        }
+
+        .chart01{
+            padding:100px 0px;
+            display: flex;
+            justify-content: center;
+            gap:20px;
+            .text{
+                flex:2;
+            }
+            .chart{
+                flex:3;
+            }
+
+        }
+    }
+}
