@@ -40,32 +40,40 @@ const allCards = document.querySelectorAll(".cover");
 
 
 //輪播
-
-$(document).ready(function(){
-$(".owl-carousel").owlCarousel();
-});
-
-
-var owl = $('.owl-carousel');
-owl.owlCarousel({
-    animateOut: 'fadeOut',
-    items:1,
-    loop:true,
-    margin:0,
-    // autoplay:true,
-    // autoplayTimeout:3000,
-    autoplayHoverPause:true,
-    // smartSpeed:250,
-    autoWidth:true,
-    autoHeight:true,
-});
-$('.play').on('click',function(){
-    owl.trigger('play.owl.autoplay',[1000])
-})
-$('.stop').on('click',function(){
-    owl.trigger('stop.owl.autoplay')
-})
-
 //boostrap輪播
 var myCarousel = document.querySelector('#myCarousel')
 var carousel = new bootstrap.Carousel(myCarousel)
+
+//粒子特效
+document.addEventListener('DOMContentLoaded', function () {
+    VANTA.DOTS({
+        el: "#bgMotion",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0xffffff,
+        color2: 0xffffff,
+        backgroundColor: 0x0057a0,
+        spacing: 10.00,
+        showLines: false
+    });
+});
+// VANTA.DOTS({
+//   el: "#bgMotion",
+//   mouseControls: true,
+//   touchControls: true,
+//   gyroControls: false,
+//   minHeight: 200.00,
+//   minWidth: 200.00,
+//   scale: 1.00,
+//   scaleMobile: 1.00,
+//   color: 0xffffff,
+//   color2: 0xffffff,
+//   backgroundColor: 0x57a0,
+//   spacing: 10.00,
+//   showLines: false
+// })

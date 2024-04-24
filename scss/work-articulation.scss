@@ -16,6 +16,7 @@ $mainColor:#FF8128;
     font-size: 18px;
     line-height: 30px;
     padding-top: 20px;
+    color: rgba(0, 0, 0, 0.5);
 }
 h1{    font-size: 50px;}
 h2{
@@ -37,6 +38,16 @@ p{
     clear: both;
     height: 0;
     visibility: hidden;
+}
+
+.scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s .3s ease;
+}
+.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .wrapper-articulation{
@@ -146,6 +157,7 @@ p{
                 }
                 .imgCalendar{
                     width: 120%;
+                    height: 100%;
                     img{
                         width: 100%;
                         height: 100%;
@@ -163,7 +175,7 @@ p{
                 padding-top: 100px;
             }
             p{
-                max-width: 800px;
+                max-width: 900px;
                 margin: 0 auto;
                 padding-bottom: 50px;
             }
@@ -171,6 +183,7 @@ p{
         .imgResearch{
             max-width: 900px;
             margin: 0 auto;
+
 
             img{
                 width: 100%;
@@ -180,6 +193,7 @@ p{
         }
     }
     .userJourneyMap{
+
         background-color: #fff;
         .text{
             text-align: center;
@@ -203,6 +217,8 @@ p{
         }
     }
     .wireFrame{
+        padding: 0 20px;
+
         background-color: #fff;
         padding-bottom: 300px;
         .text{
@@ -236,7 +252,7 @@ p{
         img{
             object-fit: cover;
             width: 100%;
-            height: 100%;
+            height: 500px;
         }
         .text{
             position: absolute;
@@ -280,4 +296,85 @@ p{
         }
     }
 
+}
+@media (max-width: 600px) {
+    h1{
+        text-align: center;
+        padding: 0 10px;
+    }
+    p{
+        text-align: center;
+        padding: 0 10px;
+
+    }
+    .wrapper-sidebar{
+        h3{
+            padding:50px 0;
+            font-size: 25px;
+        }
+        ul{
+            display: none;
+        }
+    }
+    .mainSection{
+        .text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        .phoneImg{
+            flex:none;
+            width: 100%;
+        }
+    }
+    .introSection{
+        text-align: center;
+        .intro1{
+            .phoneImg{
+                display: none;
+            }
+        }
+        .intro2{
+            
+            .imgCalendar{
+                width: 200px;
+                height: 100%;
+                display: none;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .container{
+                display:block;
+                .text{
+                    h2{
+                        text-align: center;
+                        padding-bottom: 20px;
+                    }
+                    p{
+                        padding-bottom: 100px;
+
+                    }
+                }
+            }
+
+        }
+
+    }
+    .userJourneyMap{
+        h2{
+            padding-bottom: 20px;
+        }
+    }
+    .banner{
+        display: none;
+        .text{
+
+        }
+        .bannerImg{
+            height: 100%;
+        }
+    }
 }

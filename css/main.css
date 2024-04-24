@@ -134,6 +134,10 @@
   background-color: rgb(255, 255, 255);
 }
 
+#bgMotion {
+  z-index: 100;
+}
+
 .workSection {
   padding: 150px;
   background-color: #2d2d2d;

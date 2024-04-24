@@ -10,7 +10,7 @@ btns.forEach((btn) => {
   });
 });
 
-//訂購成功按鈕
+//成功按鈕
 
 function toastSuccess() {
   let toastSuccess = document.querySelector(".toast-success");
@@ -22,7 +22,7 @@ function toastSuccess() {
 
 function toastError() {
   let toastError = document.querySelector(".toast-error");
-  toastError.classList.add("toast-show"); // 添加顯示類
+  toastError.classList.add("toast-show"); // 顯示
   setTimeout(() => {
     toastError.classList.remove("toast-show"); // 移除顯示類，觸發消失的轉場
   }, 2000); // 顯示時間
@@ -92,13 +92,13 @@ const options = [
 // });
 
 const features = [
-  "Asia, the largest and most populous continent, is a land of remarkable diversity and rich cultural heritage. It spans vast deserts, towering mountains, and endless coastlines. Home to some of the world’s oldest civilizations, Asia offers a blend of ancient traditions and rapid modernization, with bustling metropolises like Tokyo and tranquil landscapes such as the rice terraces of Bali.",
-  "Africa, often referred to as the cradle of humanity, is a continent bursting with vibrant cultures, majestic wildlife, and sprawling savannas. It boasts the Sahara, the world's largest hot desert, alongside lush rainforests and stunning beaches. Africa's rich biodiversity includes iconic species such as lions, elephants, and giraffes, making it a prime destination for safari enthusiasts.",
-  "North America is characterized by its diverse ecosystems, from the Arctic tundra of Canada to the tropical rainforests of Central America. This continent offers some of the world’s most iconic landscapes, including the Grand Canyon and Niagara Falls. It’s a melting pot of cultures, with a history deeply influenced by indigenous peoples, European colonization, and the African diaspora.",
-  "South America is known for its awe-inspiring natural wonders and colorful cultures. The Amazon Rainforest, the largest rainforest on Earth, and the Andes, the world’s longest mountain range, dominate its geography. The continent's rich cultural tapestry is reflected in its music, dance, and festivals, with the Carnival in Rio being a world-famous event.",
-  "Antarctica, the southernmost continent, is a frozen wilderness at the end of the world. It is the coldest, driest, and windiest continent, covered by the largest ice sheet on Earth. This remote land, uninhabited by humans, plays a crucial role in the world’s climate and ocean systems. Its unique landscape offers unparalleled beauty, making it a bucket-list destination for the most intrepid explorers.",
-  "Europe, rich in history and culture, is characterized by its diverse architecture, art, and cuisine. From the ancient ruins in Rome to the modernist wonders in Barcelona, Europe is a testament to human creativity across ages. The continent also offers natural beauty ranging from the fjords of Norway to the sunny beaches of the Mediterranean.",
-  "Australia, known for its vast outback, unique wildlife, and vibrant cities, is a continent of contrasts. It's home to the Great Barrier Reef, the world's largest coral reef system, and iconic landmarks like the Sydney Opera House. Australia's indigenous cultures, surf beaches, and the laid-back lifestyle make it a fascinating destination for travelers.",
+  "Asia, the largest and most populous continent, is a land of remarkable diversity and rich cultural heritage.",
+  "Africa, often referred to as the cradle of humanity, is a continent bursting with vibrant cultures, majestic wildlife, and sprawling savannas. ",
+  "North America is characterized by its diverse ecosystems, from the Arctic tundra of Canada to the tropical rainforests of Central America.",
+  "South America is known for its awe-inspiring natural wonders and colorful cultures. ",
+  "Antarctica, the southernmost continent, is a frozen wilderness at the end of the world. ",
+  "Europe, rich in history and culture, is characterized by its diverse architecture, art, and cuisine. ",
+  "Australia, known for its vast outback, unique wildlife, and vibrant cities, is a continent of contrasts. ",
 ];
 
 // features.forEach((feature) => {
@@ -109,44 +109,29 @@ const features = [
 const btnSharing = document.createElement("button");
 btnSharing.textContent = "Appreciate Sharing";
 
-// Assuming 'features' array and 'options' array are defined as in your example
 
-// Create a select element
-// const selectCon = document.createElement("select");
-select.id = "continentSelect"; // Giving an ID for easy access
+select.id = "continentSelect"; 
 
-// Create a container for displaying the selected feature text
 const featureTextContainer = document.createElement("p");
 featureTextContainer.id = "featureText";
 
-// Add options to the select element
 options.forEach((optionData, index) => {
-  // Include 'index' to match with 'features' array
   const option = document.createElement("option");
-  option.value = index.toString(); // Use index as value to map with the 'features' array
+  option.value = index.toString(); 
   option.textContent = optionData.text;
   select.appendChild(option);
 });
 
-// Add an onchange event listener to the select element
 select.onchange = function () {
-  // Get the index of the selected option
   const selectedIndex = this.value;
 
-  // Update the container's text to the corresponding feature text
-  // Check if selectedIndex is a valid index in the 'features' array to avoid errors
   if (features[selectedIndex]) {
     featureTextContainer.textContent = features[selectedIndex];
   } else {
-    featureTextContainer.textContent = ""; // Clear text if selection is invalid
+    featureTextContainer.textContent = "";
   }
 };
 
-// Assuming you have a container in your HTML to append these elements to
-// document.body.appendChild(select); // Add the select element to the page
-// document.body.appendChild(featureTextContainer); // Add the container for feature text
-
-// If you want to display the text of the first option by default
 featureTextContainer.textContent = features[0];
 
 const html = document.querySelector("html");
@@ -183,8 +168,8 @@ document.getElementById("Form").addEventListener("submit", function (event) {
 
   // 確認密碼一樣
   if (form.password.value !== form.confirm_password.value) {
-    alert("密碼和確認密碼不匹配！");
-    event.preventDefault(); // 防止表單提交
+    alert("Please confirm your password for accuracy");
+    event.preventDefault(); 
   }
 });
 

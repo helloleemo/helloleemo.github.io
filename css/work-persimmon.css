@@ -26,7 +26,7 @@
   text-align: center;
 }
 .wrapper-persimmon .container .imgbox img {
-  width: 450px;
+  max-width: 450px;
 }
 .wrapper-persimmon .container .plette {
   padding-top: 150px;
@@ -39,7 +39,7 @@
   padding-left: 10px;
 }
 .wrapper-persimmon .container .plette .color {
-  width: 150px;
+  max-width: 150px;
   height: 60px;
 }
 .wrapper-persimmon .container .plette .color h3 {
@@ -125,8 +125,8 @@
   justify-content: center;
 }
 .wrapper-persimmon .info .info1 .imgbox {
-  width: 550px;
-  height: 350px;
+  max-width: 550px;
+  max-height: 350px;
   overflow: hidden;
 }
 .wrapper-persimmon .info .info1 .imgbox img {
@@ -134,7 +134,7 @@
   object-fit: cover;
 }
 .wrapper-persimmon .info .info1 .text {
-  width: 50%;
+  max-width: 50%;
   padding-left: 30px;
 }
 .wrapper-persimmon .info .info1 .text h1 {
@@ -339,6 +339,61 @@
   height: 500px;
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
+}
+
+@media (max-width: 600px) {
+  .wrapper-sidebar .sidebar h3 {
+    padding: 50px 0;
+    font-size: 25px;
+  }
+  .wrapper-sidebar .sidebar ul {
+    display: none;
+  }
+  .wrapper-persimmon .mainSection .mainImg .imgbox {
+    width: 200px;
+  }
+  .wrapper-persimmon .container .imgbox img {
+    max-width: 250px;
+  }
+  .wrapper-persimmon .container .plette {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper-persimmon .container .plette .color {
+    width: 100px;
+    height: 100px;
+    margin-top: 25px;
+  }
+  .wrapper-persimmon .container .plette .color h3 {
+    display: none;
+  }
+  .wrapper-persimmon .container .plette .text {
+    display: none;
+  }
+  .wrapper-persimmon .info .info1 .text {
+    text-align: center;
+    padding-top: 100px;
+    max-width: 100%;
+    margin-left: -30px;
+  }
+  .wrapper-persimmon .info .info1 .text h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .wrapper-persimmon .info .info2 .container .text {
+    text-align: center;
+    width: 100%;
+    margin-left: -30px;
+  }
+  .wrapper-persimmon .info .info2 .container .text h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .info .section02 h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 
 /*# sourceMappingURL=work-persimmon.css.map */

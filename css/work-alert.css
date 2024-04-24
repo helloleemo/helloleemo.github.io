@@ -59,7 +59,7 @@ lightbox section
 }
 
 .section-lightbox {
-  padding: 150px 50px;
+  padding: 150px 10px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -73,6 +73,7 @@ lightbox section
 }
 .intro-lightbox h1 {
   color: white;
+  text-align: center;
 }
 .intro-lightbox p {
   max-width: 500px;
@@ -99,10 +100,9 @@ lightbox section
 }
 
 .lightbox {
-  max-width: 1000px;
-  height: 90vh;
+  max-width: 900px;
+  height: 900px;
   padding: 20px 20px;
-  margin: 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -145,14 +145,7 @@ lightbox section
 }
 .lightbox p {
   text-align: center;
-  padding-top: 50px;
-}
-.lightbox textarea {
-  width: 500px;
-  height: 50px;
-  border: none;
-  background-color: #f1f1f1;
-  resize: none;
+  padding-top: 20px;
 }
 .lightbox #featureText {
   border: 1px solid #ebf1f4;
@@ -188,7 +181,7 @@ lightbox section
   font-weight: 300;
   position: absolute;
   top: -30px;
-  right: 0;
+  left: 10px;
   background-color: #fff;
   color: grey;
   cursor: pointer;
@@ -211,18 +204,19 @@ Form Validation section
   align-items: center;
 }
 .section-form .introduction-form {
-  padding: 100px 50px;
+  padding: 100px 10px;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
 .section-form form {
-  margin: 0 auto;
+  margin: 0;
   margin-bottom: 150px;
   background-color: #fff;
   border-radius: 10px;
   padding: 50px;
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -482,6 +476,32 @@ Alert section
   background-color: #484848;
   height: 50px;
   width: 100%;
+}
+
+@media (max-width: 600px) {
+  .wrapper-sidebar .sidebar h3 {
+    padding: 50px 0;
+    font-size: 25px;
+  }
+  .wrapper-sidebar .sidebar ul {
+    display: none;
+  }
+  .lightbox .section-lightbox {
+    padding: 150px 5px;
+  }
+  .lightbox .intro-lightbox h1 {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .section-toast .imgbox {
+    width: 100%;
+  }
+  .section-toast .introduction h1 {
+    text-align: center;
+  }
+  .section-toast .introduction p {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=work-alert.css.map */

@@ -37,10 +37,10 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/@mojs/core" defer></script>
     <script src="js/template.js" defer></script>
-
-
+    
+    
     <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
-    <script src="js/work-articulation.js" defer></script>
+    <script src="js/work-articulation.js" defer></script><script src="js/work-persimmon.js" defer></script>
 </head>
 <body>
     <div class="wrapper-sidebar">
@@ -52,7 +52,9 @@
               </h3>
             </a>
             <ul>
-              <li style="color:white"> .</li>
+              <li><a href="#ArticulationTraining"> Articulation Training</a></li>
+              <li><a href="#UserResearch"> User Research</a></li>
+              <li><a href="#Cards"> Cards</a></li>
             </ul>
           </div>
     </div>
@@ -61,76 +63,82 @@
         <div class="imgbox">
             <img src="src/work-articulation01.png" alt="">
         </div>
-        <div class="container">
-            <div class="mainSection">
+        <div class="container" >
+            <div class="mainSection" id="ArticulationTraining">
                 <div class="text">
                     <h1>Articulation <br> Training System</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error aliquam minima quidem quae praesentium nulla atque laborum. Consequatur cupiditate sequi ipsam sit quidem tempora nesciunt, ad totam mollitia nulla eius.</p>
+                    <p>本系統設計給4-6歲有構音異常的兒童，將治療介入過程中的圖卡以APP形式呈現，並結合紀錄系統讓治療師能夠追蹤及安排療程進度。 <br>
+                    </p>
                     <img src="src/work-articulation03.png" alt="">
                 </div>
-                <div class="phoneImg">
+                <div class="phoneImg scroll">
                     <img src="src/work-articulation02.png" alt="">
                 </div>
             </div>
         </div>
             <div class="introSection">
-                <div class="intro1">
+                <div class="intro1 ">
                     <div class="container">
-                        <div class="phoneImg"><img src="src/work-articulation05.png" alt=""></div>
-                        <div class="text">
-                            <h2>有效的構音訓練系統</h2>
-                            <p>為4-6歲構音障礙之學齡前兒童提供不同程度及不同音素之訓練；同時將其使用APP練習的數據提供給語音治療師，讓語音治療師在實際診斷時能夠參考數據，提供最適化的療程。</p>
+                        <div class="phoneImg scroll"><img src="src/work-articulation05.png" alt=""></div>
+                        <div class="text scroll">
+                            <h2>Articulation Training</h2>
+                            <p>前期研究結合腦波儀測試圖卡類型及兒童專注力的相關性，中期與治療師合作圖形設計。 <br>
+                            每個圖形配合專注力圖像以及聲母及韻母練習，讓兒童能夠全面進行構音訓練。</p>
                         </div>
                     </div>
                 </div>
                 <div class="intro2">
                     <div class="container">
-                        <div class="text">
-                            <h2>最適化療程</h2>
-                            <p>SayHi是一款以特殊族群為使用者的APP，為4-6歲構音障礙之學齡前兒童提供不同程度及不同音素之訓練；同時將其使用APP練習的數據提供給語音治療師，讓語音治療師在實際診斷時能夠參考數據，提供最適化的療程。</p>
+                        <div class="text scroll">
+                            <h2>Optimizing Treatment</h2>
+                            <p>為4-6歲構音障礙之學齡前兒童提供不同程度及不同音素之訓練，同時將其使用其練習的數據提供給語音治療師，讓語音治療師在實際診斷時能夠參考數據，提供最適化的療程。</p>
                         </div>
                         <div class="imgCalendar"><img src="src/work-articulation07.png" alt=""></div>
                         <div class="imgBook"><img src="src/work-articulation06.png" alt=""></div>
                     </div>
                 </div>
             </div>
-        <div class="userResearch">
+        <div class="userResearch" id="UserResearch">
             <div class="container">
-                <div class="text">
+                <div class="text scroll">
                     <h2>User Research</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae dicta delectus maiores dolor laudantium quisquam facere quis, nulla amet illo aliquam sunt corporis. Ducimus voluptatem tempora, harum repellat iste omnis.</p>
+                    <p>訪談醫療院所的語言治療師，並設計應用於訓練圖卡的圖形。訪談結果指出，語言治療最困難的部分是無法掌握孩童離開診間後練習的狀況，且由於治療時間短暫及圖卡不合時宜的問題，導致構音訓練效率不彰。
+                        <br>專注力實驗以腦波儀進行EEG測試，並分類出兒童專注表現較佳之色彩及詞彙。
+                    </p>
                 </div>
-                <div class="imgResearch"><img src="src/work-articulation08.png" alt=""></div>
+                <div class="imgResearch scroll"><img src="src/work-articulation08.png" alt=""></div>
             </div>
         </div>
         <div class="userJourneyMap">
             <div class="container">
-                <div class="text">
+                <div class="text scroll">
                     <h2>User Journey Map</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse porro, molestiae quam mollitia culpa dolores cum fugit, impedit quasi delectus nesciunt rem velit temporibus eligendi ducimus eos assumenda deleniti consectetur.</p>
+                    <p>整個治療過程分為三個角色：構音異常兒童、家長及治療師，三者在同樣的過程中有不同的任務；本系統主要以孩童最佳治療為優先，因此整個流程會著重於孩童的治療過程中的效率及表現。</p>
                 </div>
-                <div class="imgJourneyMap"><img src="src/work-articulation09.png" alt=""></div>
+                <div class="imgJourneyMap scroll"><img src="src/work-articulation09.png" alt=""></div>
             </div>
         </div>
         <div class="wireFrame">
-            <div class="text">
+            <div class="text scroll">
                 <h2>Wire Frame</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt iure repellendus labore! Officia obcaecati assumenda, alias quos quae autem ducimus, qui nam optio corrupti corporis quas voluptates. At, repudiandae earum?</p>
+                <p>本系統的宗旨在於能夠三方共造構音異常之兒童能效率及有效治療的過程。 <br>
+                    在同樣的平台，家長能夠依據平台的內容進行參考及讓孩童練習構音，語言治療師亦能夠透過平台得知兒童練習狀況及進度，進而參考及規劃療程進度，讓訓練並不只是在平板或手機等載體，而是能夠內化到日常生活的語言當中，建立孩子自信社交及自我學習的未來。</p>
             </div>   
-            <div class="imgWireframe"><img src="src/work-articulation10.png" alt=""></div>
+            <div class="imgWireframe scroll"><img src="src/work-articulation10.png" alt=""></div>
         </div>
-        <div class="cards">
-            <div class="text">
-                <h2>imgCards</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt iure repellendus labore! Officia obcaecati assumenda, alias quos quae autem ducimus, qui nam optio corrupti corporis quas voluptates. At, repudiandae earum?</p>
+        <div class="cards scroll" id="Cards">
+            <div class="text scroll">
+                <h2>Cards</h2>
+                <p>整體來說，在構音異常的兒童治療中，訓練圖卡是一種常見的介入方式，對於構音異常的兒童來說，透過多元化的圖卡訓練，可能能夠提高他們的專注力和興趣，從而改善他們的語言表達能力。 <br>
+                以下是與語言治療師合作建立的圖卡，圖卡包括聲母韻母練習及色彩、圖形外觀型態的調整。</p>
             </div>
             <div class="imgCards"><img src="src/work-articulation12.png" alt=""></div>
         </div>
         <div class="banner">
             <div class="bannerImg"><img src="src/work-articulation11.png" alt=""></div>
             <div class="text">
-                <h2>Lorem ipsum dolor sit amet.</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, iste. Laudantium ab, facere harum a modi ex illum iusto atque architecto exercitationem ea dolores optio adipisci minima dicta culpa nisi.</p>
+                <h2>Future</h2>
+                <p>通過這些完善的治療計劃和專業語言治療師指導，才能幫助兒童克服構音問題，促進其發展和成長。因此，家長和治療師可以共同努力，從不同的角度來幫助兒童提高語言能力，進而對其認知、學習和社交能力的發展帶來好的影響。</p>
             </div>
         </div>
 

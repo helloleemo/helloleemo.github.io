@@ -16,5 +16,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // 初始检查
+    handleScroll();
 });

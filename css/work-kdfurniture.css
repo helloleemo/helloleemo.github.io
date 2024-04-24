@@ -86,7 +86,7 @@
   justify-content: center;
 }
 .wrapper-furniture .intro1 .img8 img {
-  width: 380px;
+  max-width: 380px;
   height: 100%;
   padding: 10px;
 }
@@ -98,7 +98,7 @@
 }
 .wrapper-furniture .intro1 .final .imgbox {
   margin: 0 auto;
-  width: 800px;
+  max-width: 800px;
   height: 100%;
   padding-top: 50px;
 }
@@ -106,6 +106,27 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s 0.3s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .wrapper-sidebar .sidebar h3 {
+    padding: 50px 0;
+    font-size: 25px;
+  }
+  .wrapper-sidebar .sidebar ul {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=work-kdfurniture.css.map */

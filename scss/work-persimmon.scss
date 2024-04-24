@@ -52,7 +52,7 @@ $colorBlack:#222222;
         .imgbox{
             text-align: center;
             img{
-                width: 450px;
+                max-width: 450px;
             }
         }
         .plette{
@@ -67,7 +67,7 @@ $colorBlack:#222222;
 
             }
             .color{
-                width: 150px;
+                max-width: 150px;
                 height: 60px;
                 
                 h3{
@@ -157,8 +157,8 @@ $colorBlack:#222222;
             justify-content: center;
             
             .imgbox{
-                width: 550px;
-                height: 350px;
+                max-width: 550px;
+                max-height: 350px;
                 overflow: hidden;
                 img{
                     width: 100%;
@@ -166,7 +166,7 @@ $colorBlack:#222222;
                 }
             }
             .text{
-                width: 50%;
+                max-width: 50%;
                 padding-left:30px;
 
                 h1{@include h1Style;}
@@ -356,5 +356,87 @@ $colorBlack:#222222;
     }
 
 
+    
+}
+@media (max-width: 600px) {
+    .wrapper-sidebar{
+    .sidebar{
+            h3{
+                padding:50px 0;
+                font-size: 25px;
+            }
+            ul{
+                display: none;
+            }
+        }
+    }
+    .wrapper-persimmon{
+        .mainSection{
+            .mainImg{
+                .imgbox{
+                    width: 200px;
+                }
+            }
+        }
+        .container  {
+            .imgbox img{
+                max-width: 250px;
+            }
+            .plette{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .color{
+                    width: 100px;
+                    height: 100px;
+                    margin-top: 25px;
+
+                }
+                .color h3{
+                    display: none;
+                }
+                .text{
+                    display: none;
+                }
+            }
+
+        }
+        .info{
+            .info1{
+                .text{
+                        h1{
+                            font-size: 40px;
+                            line-height: 40px;
+                        }
+                    text-align: center;
+                    padding-top: 100px;
+                    max-width: 100%;
+                    margin-left: -30px;
+
+                }
+            }
+            .info2{
+                .container{
+                    .text{
+                        h1{
+                            font-size: 40px;
+                            line-height: 40px;
+                        }
+                        text-align: center;
+                        width: 100%;
+                        margin-left:-30px;
+
+                    }  
+                }
+              
+            }
+        }
+    }
+    .info .section02{
+        h1{
+            font-size: 40px;
+            line-height: 40px;
+        }            
+    }
     
 }

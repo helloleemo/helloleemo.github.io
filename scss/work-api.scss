@@ -11,7 +11,7 @@ $texColor:rgb(78, 78, 78);
 
 .loading{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: $mainColor;
     position:fixed;
     z-index: 10;
@@ -19,11 +19,12 @@ $texColor:rgb(78, 78, 78);
     i{
         display: inline-block;
         color:white;
-        font-size: 50px;
+        font-size: 20px;
         
         position:absolute;
-        top:45%;
+        top:50%;
         right:50%;
+        transform: translate(-50%,-50%);
 
         animation:loading 1s both infinite,slideOutUp .5s 3s forwards ease ;
         @keyframes loading {
@@ -38,7 +39,7 @@ $texColor:rgb(78, 78, 78);
 
 }
 .hide{
-    opacity: 0; /* 设置为完全透明 */
+    opacity: 0; 
     // visibility: hidden;
     transform: translateY(-100%);
     transition: all 0s .3s ease-out;
@@ -225,7 +226,7 @@ $texColor:rgb(78, 78, 78);
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                opacity: 0; /* 初始设置文字不可见 */
+                opacity: 0; 
                 text-align: center;
                 h3{
                 font-size: 30px;
@@ -375,5 +376,32 @@ $texColor:rgb(78, 78, 78);
         }
         }
 
+    }
+}
+@media (max-width: 600px) {
+    .wrapper-sidebar{
+    .sidebar{
+            h3{
+                padding:50px 0;
+                font-size: 25px;
+            }
+            ul{
+                display: none;
+            }
+        }
+    }
+    .nav-api{
+        display: none;
+    }
+    .main-api{
+        padding:200px 20px;
+    }
+    #fetch{
+        li{
+        width: 280px;
+        height: 190px;
+        margin-left: -20px;
+
+        }
     }
 }
