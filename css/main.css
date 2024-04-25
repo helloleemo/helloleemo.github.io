@@ -22,7 +22,14 @@
 }
 
 .mainNavbar {
+  z-index: 100;
   background-color: rgba(0, 0, 0, 0.9);
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.3s ease;
 }
 
 .navbarItems {
@@ -30,19 +37,14 @@
   justify-content: space-between;
   align-items: center;
 }
-.navbarItems .logo {
-  width: 150px;
-  height: 50px;
-  background-color: rgb(176, 109, 109);
-}
-.navbarItems ul {
+.navbarItems .ul {
   display: flex;
+  margin-bottom: 0px;
+  padding: 10px 0;
 }
 .navbarItems li {
   list-style: none;
-  padding-right: 10px;
   display: flex;
-  align-items: center;
   margin: 0 5px;
 }
 .navbarItems a {
@@ -50,10 +52,13 @@
   font-family: "Rubik", sans-serif;
   font-size: 16px;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   padding: 10px 15px;
   letter-spacing: 1px;
-  line-height: 50px;
+  transition: all 0.3s ease;
+}
+.navbarItems a:hover {
+  font-weight: 900;
 }
 
 .mainSection {
@@ -92,12 +97,43 @@
 
 .about .carousel-item img {
   object-fit: cover;
-  object-position: 50% 80%;
   height: 800px;
+}
+.about .carousel-item .bgAlpha {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.about .carousel-item .bgAlpha .alpha {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 500px;
+  height: 400px;
+}
+.about .carousel-item .bgAlpha .text {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  padding: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.about .carousel-item .bgAlpha .text img {
+  padding-top: 50px;
+  width: 100px;
+  height: 100%;
 }
 
 .icons {
   padding-top: 10px;
+}
+.icons .iconSvg {
+  width: 35px;
+  opacity: 0.5;
+  margin-top: -28px;
 }
 .icons i {
   font-weight: 600;
@@ -138,6 +174,13 @@
   z-index: 100;
 }
 
+.wrappermain .navbarItems .logoImg {
+  margin: 5px 10px;
+}
+.wrappermain .navbarItems .logoImg img {
+  width: 80px;
+}
+
 .workSection {
   padding: 150px;
   background-color: #2d2d2d;
@@ -149,6 +192,18 @@
   color: rgba(0, 0, 0, 0.8);
   text-align: center;
   color: white;
+  padding-bottom: 100px;
+}
+.workSection p {
+  opacity: 0.7;
+}
+.workSection .tagFeature {
+  color: white;
+  border: 1px solid white;
+  display: inline-block;
+  border-radius: 30px;
+  padding: 5px 20px;
+  opacity: 0.8;
 }
 
 .set {
@@ -156,24 +211,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.set .tagAll {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 30px 0;
-}
-.set .tagAll .text {
-  padding: 10px 20px;
-  margin: 10px 20px;
-  border-radius: 20px;
-  background-color: #ffffff;
-  font-weight: 400;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-.set .tagAll .text:hover {
-  background-color: rgb(28, 109, 157);
-  color: white;
 }
 .set .cardbox {
   display: flex;
@@ -258,18 +295,26 @@
 }
 
 @media (max-width: 600px) {
-  .navbar {
-    height: 100px;
+  .mainNavbar {
+    height: 70px;
   }
   .navbarItems {
     display: flex;
     justify-content: center;
   }
-  .navbarItems .logo {
-    margin-top: 25px;
+  .navbarItems .logoImg {
+    padding-top: 15px;
   }
-  .navbarItems ul {
+  .navbarItems .ul {
     display: none;
+  }
+  .about .carousel-inner .carousel-item {
+    height: 561px;
+    overflow-y: hidden;
+  }
+  .about .carousel-inner .carousel-item .alpha {
+    width: 300px;
+    height: 480px;
   }
   .mainSection .title {
     font-size: 60px;
@@ -282,21 +327,23 @@
     padding: 20px 40px;
     font-size: 20px;
   }
-  .about .aboutImg {
-    display: none;
-  }
-  .about .intro {
-    padding-left: 0px;
-    padding: 0 20px;
-  }
   .workSection {
-    padding: 20px;
+    padding: 100px 20px;
   }
-  .workSection .set .tagAll {
+  .workSection .container h1 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 40px;
+  }
+  .workSection .container p {
+    text-align: center;
     display: none;
   }
-  .workSection .set .imgbox {
-    height: 300px;
+  .workSection .container .imgbox {
+    height: 350px;
+  }
+  .workSection .container .icons {
+    display: none;
   }
 }
 

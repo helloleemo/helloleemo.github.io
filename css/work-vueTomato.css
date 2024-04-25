@@ -181,4 +181,23 @@
   background-color: #eb4c5e;
 }
 
+@media (max-width: 600px) {
+  .wrapper-sidebar .sidebar h3 {
+    padding: 50px 0;
+    font-size: 25px;
+  }
+  .wrapper-sidebar .sidebar ul {
+    display: none;
+  }
+  #app h1 {
+    font-size: 30px;
+  }
+  #app .timer {
+    font-size: 100px;
+  }
+  #app .fa-gear, #app .fa-play {
+    font-size: 20px;
+  }
+}
+
 /*# sourceMappingURL=work-vueTomato.css.map */

@@ -53,6 +53,16 @@
   color: rgba(255, 255, 255, 0.6);
   max-width: 800px;
 }
+.wrapper-hpss .mainSection .text .imgbox {
+  padding-top: 20px;
+  margin: 0 auto;
+  width: 200px;
+  height: 100%;
+}
+.wrapper-hpss .mainSection .text .imgbox img {
+  width: 100%;
+  height: 100%;
+}
 .wrapper-hpss .intro {
   padding: 100px 0;
 }
@@ -250,6 +260,106 @@
 }
 .wrapper-hpss .effective .chart01 .chart {
   flex: 3;
+}
+
+@media (max-width: 600px) {
+  .wrapper-sidebar .sidebar h3 {
+    padding: 50px 0;
+    font-size: 25px;
+  }
+  .wrapper-sidebar .sidebar ul {
+    display: none;
+  }
+  .wrapper-hpss .mainSection .imgbox {
+    height: 1000px;
+  }
+  .wrapper-hpss .mainSection .text {
+    padding-top: 100px;
+  }
+  .wrapper-hpss .intro .container .section .textLeft {
+    flex: none;
+    width: 100%;
+    text-align: center;
+    order: 1;
+  }
+  .wrapper-hpss .intro .container .section .textRight {
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
+  .wrapper-hpss .intro .container .section .imgbox {
+    flex: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .wrapper-hpss .optimize .container .optimizeImg {
+    flex-wrap: wrap;
+  }
+  .wrapper-hpss .usibilityTest {
+    padding: 100px 10px;
+  }
+  .wrapper-hpss .usibilityTest .container .imgbox {
+    flex-wrap: wrap;
+  }
+  .wrapper-hpss .usibilityTest .container .imgbox .img {
+    width: 100%;
+  }
+  .wrapper-hpss .functionMap {
+    padding: 100px 10px;
+  }
+  .usibilityTest2 .container .text {
+    width: 100%;
+  }
+  .usibilityTest2 .container .historyText {
+    max-width: 100%;
+  }
+  .usibilityTest2 .container .imgbox {
+    width: 100%;
+  }
+  .usibilityTest2 .container .imgbox img {
+    width: 200px;
+  }
+  .usibilityTest2 .container .trainingImg img {
+    width: 100%;
+    padding-top: 50px;
+  }
+  .usibilityTest2 .container .historyText {
+    width: 100%;
+  }
+  .usibilityTest2 .container .historyText img {
+    width: 200px;
+  }
+  .usibilityTest2 .container .historyImg {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .usibilityTest2 .container .historyImg img {
+    padding-bottom: 50px;
+  }
+  .effective .container .chart01 {
+    flex-wrap: wrap;
+  }
+  .effective .container .chart01 .text {
+    flex: none;
+    width: 100%;
+  }
+  .effective .container .chart01 .chart {
+    flex: none;
+    width: 100%;
+  }
+  .effective .container .chart01 .myChart2 {
+    order: 1;
+  }
+}
+.scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s 0.3s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /*# sourceMappingURL=work-hpss.css.map */

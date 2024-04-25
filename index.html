@@ -50,16 +50,14 @@
         <div class="mainContainer">
           <div class="navbarItems">
             <div class="logoImg">
-              <div class="logo"></div>
+              <img src="src/logo.svg" alt="">
             </div>
-            <!-- <div class="item"> -->
-              <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#work">WorkStation</a></li>
-                <li><a href="">Contact</a></li>
-              </ul>
-            <!-- </div> -->
+            <ul class="ul">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#work">WorkStation</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -87,22 +85,47 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
-              <img src="src/award01.png" class="d-block w-100" alt="...">
+              <img src="src/carousel1.png" class="d-block w-100" alt="...">
+              <div class="bgAlpha">
+                <div class="alpha"></div>
+                <div class="text">
+                  <h1 style="color:rgba(0, 0, 0, .6)">KD Furniture</h1>
+                  <p style="color:rgba(0, 0, 0, .4)">Furniture is designed to be disassembled into small units, suitable for rented spaces or small families, with a modular system that allows assembly as needed.</p>
+                  <img style="width: 200px;" src="src/work-kdfurniture02.png" alt="">
+                </div>
+              </div>              
               <div class="carousel-caption d-none d-md-block">
               </div>
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-              <img src="src/award02.png" class="d-block w-100" alt="...">
+              <img src="src/carousel2.png" class="d-block w-100" alt="...">
+              <div class="bgAlpha">
+                <div class="alpha"></div>
+                <div class="text">
+                  <h1>SAKURA kitchenware design</h1>
+                  <p>A modern kitchenware design proposal tailored for potential products in contemporary family kitchens.</p>
+                  <img src="src/work-sakura02.png" alt="">
+                </div>
+              </div>  
               <div class="carousel-caption d-none d-md-block">
               </div>
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-              <img src="src/award03.png" class="d-block w-100" alt="...">
+              <img src="src/carousel3.png" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
               </div>
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-              <img src="src/award04.png" class="d-block w-100" alt="...">
+              <img src="src/carousel4.png" class="d-block w-100" alt="...">
+              <div class="bgAlpha ">
+                <div class="alpha"></div>
+                <div class="text">
+                  <h1>HPSS</h1>
+                  <p>User experience studies and optimization for systems aimed at elderly users.</p>
+                  <img src="src/work-hpss26.png" alt="">
+                  <img src="src/work-hpss27.png" alt="">
+                </div>
+              </div>              
               <div class="carousel-caption d-none d-md-block">
               </div>
             </div>          
@@ -127,23 +150,107 @@
           <h1>WorkStation</h1>
 
           <div class="set">
-            <div class="tagAll">
+            <!-- <div class="tagAll">
               <div class="text">All</div>
               <div class="text">Awards</div>
               <div class="text">UIUX</div>
               <div class="text">FrontEnd</div>
               <div class="text">Graphic Design</div>
               <div class="text">Product</div>
-            </div>
+            </div> -->
             <div class="cardbox">
+
+              <!-- work-vueApi -->
+              <a href="work-api.html" target="_blank">
+                <div class="imgbox">
+                  <div class="alpha">
+                    <div class="description">
+                      <span class="tagFeature">FrontEnd</span>
+
+                      <h2>Gallery website</h2>
+                      <p>A mock photography platform was developed by integrating an image gallery and personal information APIs using Fetch.</p>
+                      <div class="icons">
+                        <i class="fa-brands fa-html5"> </i>
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <i class="fa-brands fa-js"></i>
+                        <i class="fa-brands fa-figma"></i>
+                        <i class="fa-brands fa-sass"></i>
+                        <i>Ajax</i>
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    class="working"
+                    src="src/work-api.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <!-- hpss -->
+              <a href="work-hpss.html" target="_blank">
+                <div class="imgbox">
+                  <div class="alpha">
+                    <div class="description">
+                      <span class="tagFeature">UIUX</span>
+                      <span class="tagFeature">Product Design</span>
+
+                      <h2>HPSS</h2>
+                      <p>User experience studies and optimization for systems aimed at elderly users.</p>
+                      <div class="icons">
+                        <i class="fa-brands fa-figma"></i>
+                        <div class="adobe">Ai</div>
+                        <div class="adobe">Ps</div>
+                        <i class="fa-brands fa-html5"> </i>
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <i class="fa-brands fa-js"></i>                        
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    class="working"
+                    src="src/work-hpss00.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <!-- Articulation -->
+              <a href="work-articulation.html" target="_blank">
+                <div class="imgbox">
+                  <div class="alpha">
+                    <div class="description">
+                      <span class="tagFeature">UIUX</span>
+
+                      <h2>Articulation training system design</h2>
+                      <p>Designed therapy programs and optimized processes for special groups, enabling children with articulation disorders to practice effectively.</p>
+                      <div class="icons">
+                        <i class="fa-brands fa-figma"></i>
+                        <div class="adobe">Ai</div>
+                        <div class="adobe">Ps</div>
+                        <i class="fa-brands fa-html5"> </i>
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <i class="fa-brands fa-js"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    class="working"
+                    src="src/work-articulation00.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
 
               <!-- To do list -->
               <a href="work-todolist.html" target="_blank">
                 <div class="imgbox">
                   <div class="alpha">
                     <div class="description">
+                      <span class="tagFeature">FrontEnd</span>
                       <h2>To do list</h2>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum tenetur provident doloribus impedit corrupti praesentium quis ratione error repellendus dolorem.</p>
+                      <p>This is a to-do list application that allows users to add tasks, mark priorities, check off completed tasks, and delete them.</p>
                       <div class="icons">
                         <i class="fa-brands fa-figma"></i>
                         <i class="fa-brands fa-html5"> </i>
@@ -162,13 +269,71 @@
                 </div>
               </a>
 
+              <!-- work-vueTomato -->
+              <a href="work-vueTomato.html" target="_blank">
+                <div class="imgbox">
+                  <div class="alpha">
+                    <div class="description">
+                      <span class="tagFeature">FrontEnd</span>
+                      <h2>Pomodoro</h2>
+                      <p>The Pomodoro timer features countdown and pause functions, as well as the ability to customize break and focus durations.</p>
+                      <div class="icons">
+                        <i class="fa-brands fa-html5"> </i>
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <i class="fa-brands fa-js"></i>
+                        <i class="fa-brands fa-vuejs"></i>
+                        <i class="fa-brands fa-figma"></i>
+                        <i class="fa-brands fa-sass"></i>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    class="working"
+                    src="src/work-pomodoro.png"
+                    alt=""
+                  />
+                </div>
+              </a>
+
+              <!-- work-alert -->
+              <a href="work-alert.html" target="_blank">
+                <div class="imgbox">
+                  <div class="alpha">
+                    <div class="description">
+                      <span class="tagFeature">FrontEnd</span>
+
+                      <h2>Components</h2>
+                      <!-- <h2>展示一般網頁可能使用的元件</h2> -->
+                      <!-- <div class="line"></div> -->
+                      <p>
+                        Useful components were created using HTML, CSS, and JavaScript.
+                      </p>
+                      <div class="icons">
+                        <i class="fa-brands fa-html5"> </i>
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <i class="fa-brands fa-js"></i>
+                        <i class="fa-brands fa-figma"></i>
+                        <i class="fa-brands fa-sass"></i>
+
+                      </div>
+                    </div>
+                  </div>
+                  <img class="working" src="src/work-alert.png" alt="" />
+                </div>
+              </a>
+
+
+
+
               <!-- persimmon -->             
               <a href="work-persimmon.html" target="_blank">
                 <div class="imgbox">
                   <div class="alpha">
                     <div class="description">
+                      <span class="tagFeature">Graphic Design</span>
                       <h2>梅柿就是好柿</h2>
-                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint rerum perferendis ipsum cupiditate. Illo corrupti mollitia temporibus numquam quaerat, explicabo, in cum odit dolor, voluptates sit assumenda nemo est magnam.</p>
+                      <p>This is a CI design created for the indigenous people in the Jianshi Township of Hsinchu. The design is applied to their souvenirs and agricultural products.</p>
                       <div class="icons">
                         <div class="adobe">Ai</div>
                         <div class="adobe">Ps</div>
@@ -189,105 +354,20 @@
                 </div>
               </a>
 
-              <!-- work-vueTomato -->
-              <a href="work-vueTomato.html" target="_blank">
-                <div class="imgbox">
-                  <div class="alpha">
-                    <div class="description">
-                      <h2>Pomodoro</h2>
-                      <p>This is a Pomodoro timer that allows you to set focus and break times.</p>
-                      <div class="icons">
-                        <i class="fa-brands fa-html5"> </i>
-                        <i class="fa-brands fa-css3-alt"></i>
-                        <i class="fa-brands fa-js"></i>
-                        <i class="fa-brands fa-vuejs"></i>
-                        <i class="fa-brands fa-figma"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <img
-                    class="working"
-                    src="src/work-pomodoro.png"
-                    alt=""
-                  />
-                </div>
-              </a>
-
-              <!-- work-alert -->
-              <a href="work-alert.html" target="_blank">
-                <div class="imgbox">
-                  <div class="alpha">
-                    <div class="description">
-                      <h2>Components</h2>
-                      <!-- <h3>展示一般網頁可能使用的元件</h3> -->
-                      <!-- <div class="line"></div> -->
-                      <p>
-                        Showcasing <span>useful components</span> that might be used on a
-                        typical website, including standard layouts, lightboxes,
-                        popups, and form validation.
-                      </p>
-                      <div class="icons">
-                        <i class="fa-brands fa-html5"> </i>
-                        <i class="fa-brands fa-css3-alt"></i>
-                        <i class="fa-brands fa-js"></i>
-                        <i class="fa-brands fa-figma"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <img class="working" src="src/work-alert.png" alt="" />
-                </div>
-              </a>
-
-              <!-- work-vueApi -->
-              <a href="work-api.html" target="_blank">
-                <div class="imgbox">
-                  <div class="alpha">
-                    <div class="description">
-                      <h2>Gallery website</h2>
-                      <h3></h3>
-                      <p>Design a website where photographers can upload their works for clients to view and select.  <span>Use Fetch for Ajax</span>calls to create a gallery featuring images and portraits.</p>
-                      <div class="icons">
-                        <i class="fa-brands fa-html5"> </i>
-                        <i class="fa-brands fa-css3-alt"></i>
-                        <i class="fa-brands fa-js"></i>
-                        <i class="fa-brands fa-figma"></i>
-                        <i>Ajax</i>
-                      </div>
-                    </div>
-                  </div>
-                  <img
-                    class="working"
-                    src="src/work-api.png"
-                    alt=""
-                  />
-                </div>
-              </a>
-
-              <!-- Articulation -->
-              <a href="work-articulation.html" target="_blank">
-                <div class="imgbox">
-                  <div class="alpha">
-                    <div class="description">
-                      <h2>Articulation training system design</h2>
-                      <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
-                  </div>
-                  <img
-                    class="working"
-                    src="src/work-articulation00.png"
-                    alt=""
-                  />
-                </div>
-              </a>
-
-              <!-- Articulation -->
               <!-- KD furniture -->
               <a href="work-kdfurniture.html" target="_blank">
                 <div class="imgbox">
                   <div class="alpha">
                     <div class="description">
-                      <h2>SAKURA Furnishing</h2>
-                      <p>Lorem ipsum dolor sit amet.</p>
+                      <span class="tagFeature">Product Design</span>
+
+                      <h2>KD Furniture</h2>
+                      <p>Furniture is designed to be disassembled into small units, suitable for rented spaces or small families, with a modular system that allows assembly as needed.</p>
+                      <div class="icons">
+                        <div class="adobe">Ai</div>
+                        <div class="adobe">Ps</div>
+                        <img class="iconSvg" src="src/icon.svg" alt="">
+                      </div>
                     </div>
                   </div>
                   <img
@@ -297,16 +377,23 @@
                   />
                 </div>
               </a>
-
-              <!-- KD furniture -->
      
               <!-- SAKURA -->
               <a href="work-sakura.html" target="_blank">
                 <div class="imgbox">
                   <div class="alpha">
                     <div class="description">
-                      <h2>SAKURA Furnishing</h2>
-                      <p>Lorem ipsum dolor sit amet.</p>
+                      <span class="tagFeature">Product Design</span>
+
+                      <h2>SAKURA kitchenware design</h2>
+                      <p>A modern kitchenware design proposal tailored for potential products in contemporary family kitchens.</p>
+                      <div class="icons">
+                        <div class="adobe">Ai</div>
+                        <div class="adobe">Ps</div>
+                        <img class="iconSvg" src="src/icon.svg" alt="">
+
+
+                      </div>
                     </div>
                   </div>
                   <img
@@ -317,54 +404,9 @@
                 </div>
               </a>
 
-              <!-- SAKURA -->
 
-              <!-- hpss -->
-              <a href="work-hpss.html" target="_blank">
-                <div class="imgbox">
-                  <div class="alpha">
-                    <div class="description">
-                      <h2>HPSS</h2>
-                      <h3>智慧健康促進系統</h3>
-                      <p>表單驗證及互動</p>
-                      <h3>Awards</h3>
-                      <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
-                  </div>
-                  <img
-                    class="working"
-                    src="src/work-hpss00.png"
-                    alt=""
-                  />
-                </div>
-              </a>
 
-              <!-- hpss -->
 
-              
-
-              
-              
-              <!-- sample -->
-              
-              <div class="imgbox">
-                <div class="alpha">
-                  <div class="description">
-                    <h2>Sample</h2>
-                    <h3>表單驗證</h3>
-                    <p>表單驗證及互動</p>
-                    <h3>Awards</h3>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                  </div>
-                </div>
-                <img
-                  class="working"
-                  src="https://picsum.photos/600/400"
-                  alt=""
-                />
-              </div>
-
-              <!-- sample -->
             </div>
           </div>
         </div>

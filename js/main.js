@@ -44,36 +44,32 @@ const allCards = document.querySelectorAll(".cover");
 var myCarousel = document.querySelector('#myCarousel')
 var carousel = new bootstrap.Carousel(myCarousel)
 
-//粒子特效
-document.addEventListener('DOMContentLoaded', function () {
-    VANTA.DOTS({
-        el: "#bgMotion",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0xffffff,
-        color2: 0xffffff,
-        backgroundColor: 0x0057a0,
-        spacing: 10.00,
-        showLines: false
-    });
+
+//導航列隱藏
+let lastScrollTop = 0;
+const navbar = document.querySelector('.mainNavbar');
+
+window.addEventListener('scroll', function() {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop) {
+    // 向下滾動
+    navbar.style.opacity = "0"; 
+  } else {
+    // 向上滾動
+    navbar.style.opacity = "1";
+  }
+  lastScrollTop = scrollTop;
 });
-// VANTA.DOTS({
-//   el: "#bgMotion",
-//   mouseControls: true,
-//   touchControls: true,
-//   gyroControls: false,
-//   minHeight: 200.00,
-//   minWidth: 200.00,
-//   scale: 1.00,
-//   scaleMobile: 1.00,
-//   color: 0xffffff,
-//   color2: 0xffffff,
-//   backgroundColor: 0x57a0,
-//   spacing: 10.00,
-//   showLines: false
-// })
+
+navbar.addEventListener("mouseover", function() {
+  navbar.style.opacity = "1";
+});
+
+navbar.addEventListener("mouseout", function() {
+  if (lastScrollTop = scrollTop){
+    navbar.style.opacity = "1";
+  }else{
+    navbar.style.opacity = "0";
+  }
+  
+});

@@ -64,7 +64,8 @@
   max-width: 550px;
   position: absolute;
   top: 20%;
-  right: 20%;
+  right: 50%;
+  transform: translateX(50%);
 }
 .wrapper-sakura .awards .logo {
   padding-top: 50px;
@@ -111,6 +112,7 @@
 .wrapper-sakura .intro1 .text {
   width: 50%;
   padding-left: 30px;
+  padding-right: 30px;
 }
 .wrapper-sakura .intro1 .text h2 {
   font-size: 40px;
@@ -236,6 +238,63 @@
   height: 100%;
   object-fit: cover;
   object-position: 10% 20%;
+}
+
+@media (max-width: 600px) {
+  .wrapper-sidebar .sidebar h3 {
+    padding: 50px 0;
+    font-size: 25px;
+  }
+  .wrapper-sidebar .sidebar ul {
+    display: none;
+  }
+  .wrapper-sakura .container .awards {
+    top: 20%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .wrapper-sakura .container .awards .logo {
+    width: 100%;
+    height: 100%;
+  }
+  .container .intro1 .imgbox {
+    width: 100%;
+  }
+  .container .intro1 .text {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .interface .container .imgbox2 {
+    flex: none;
+    width: 100%;
+  }
+  .interface .container .text {
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
+  .interface .container .row .text {
+    text-align: center;
+    flex: none;
+    width: 100%;
+  }
+  .intro3 .conatiner .row .col {
+    padding: 0 20px;
+  }
+  .intro3 .conatiner .row .col img {
+    max-width: 250px;
+  }
+}
+.scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s 0.3s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /*# sourceMappingURL=work-sakura.css.map */

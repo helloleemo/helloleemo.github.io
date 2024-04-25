@@ -75,7 +75,8 @@ p{
         max-width: 550px;
         position:absolute;
         top:20%;
-        right:20%;        
+        right:50%;
+        transform: translateX(50%);        
         .logo{
             padding-top: 50px;
             width: 50%;
@@ -119,6 +120,7 @@ p{
         .text{
             width: 50%;
             padding-left: 30px;
+            padding-right: 30px;
             h2{
                 font-size: 40px;
             }
@@ -264,4 +266,100 @@ p{
         }
     }
 
+}
+@media (max-width: 600px) {
+    .wrapper-sidebar{
+    .sidebar{
+            h3{
+                padding:50px 0;
+                font-size: 25px;
+            }
+            ul{
+                display: none;
+            }
+        }
+    }
+    .wrapper-sakura{
+        .main{
+            .mainImg{
+                .poster{
+                    .pres{
+
+                        img{
+
+                        }
+                    }
+                }
+            }
+
+        }
+        .container{
+            .awards{
+            top:20%;
+            right:50%;
+            transform: translateX(50%);
+            .logo{
+                width: 100%;
+                height: 100%;
+            }
+
+            }
+        }
+    }
+    .container{
+        .intro1{
+            .imgbox{
+                width: 100%;
+            }
+            .text{
+                width: 100%;
+                text-align: center;
+                padding-bottom: 50px;
+
+            }
+        }
+    }
+    .interface{
+        .container{
+            .imgbox2{
+                flex:none;
+                width: 100%;
+            }
+            .text{
+                flex:none;
+                width: 100%;
+                text-align: center;
+
+            }
+            .row{
+                .text{
+                    text-align: center;
+                    flex:none;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .intro3{
+     .conatiner{
+        .row{
+            .col{
+                padding: 0 20px;
+                img{
+                    max-width: 250px;
+                }
+            }
+        }
+     }   
+    }
+}
+
+.scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s .3s ease;
+}
+.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

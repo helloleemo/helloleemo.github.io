@@ -177,4 +177,32 @@
   display: flex;
 }
 
+@media (max-width: 600px) {
+  .wrapper-sidebar .sidebar h3 {
+    padding: 50px 0;
+    font-size: 25px;
+  }
+  .wrapper-sidebar .sidebar ul {
+    display: none;
+  }
+  #app h1 {
+    font-size: 30px;
+  }
+  #app .container {
+    max-width: 300px;
+  }
+  #app .input .outline {
+    width: 200px;
+  }
+  #app .input .outline input {
+    width: 180px;
+  }
+  #app ul li {
+    width: 180px;
+  }
+  #app ul li p {
+    font-size: 18px;
+  }
+}
+
 /*# sourceMappingURL=work-todolist.css.map */

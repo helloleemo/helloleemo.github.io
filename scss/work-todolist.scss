@@ -214,3 +214,43 @@ $normalColor:rgb(184, 184, 184);
         display: flex;
     }
 }
+@media (max-width: 600px) {
+    .wrapper-sidebar{
+    .sidebar{
+            h3{
+                padding:50px 0;
+                font-size: 25px;
+            }
+            ul{
+                display: none;
+            }
+        }
+    }
+    #app{
+        .wrapper{
+
+        }
+        h1{
+            font-size: 30px;
+        }
+        .container{
+            max-width: 300px;
+        }
+        .input{
+            .outline{
+                width: 200px;
+                input{
+                    width: 180px;
+                }
+            }
+        }
+        ul{
+            li{
+                width: 180px;
+                p{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

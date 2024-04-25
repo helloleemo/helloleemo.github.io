@@ -221,3 +221,27 @@ $gradient:linear-gradient(to top, #a7392c, #eb4c5e);
         }
     }
 }
+@media (max-width: 600px) {
+    .wrapper-sidebar{
+    .sidebar{
+            h3{
+                padding:50px 0;
+                font-size: 25px;
+            }
+            ul{
+                display: none;
+            }
+        }
+    }
+    #app{
+        h1{
+            font-size: 30px;
+        }
+        .timer{
+            font-size: 100px;
+        }
+        .fa-gear, .fa-play{
+            font-size: 20px;
+        }
+    }
+}
