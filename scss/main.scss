@@ -151,6 +151,19 @@ $lineColor: rgba(0, 0, 0, 0.7);
 
     cursor: pointer;
   }
+  .downloadBtn{
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+    padding-top: 50px;
+    transition: all .3s;
+
+    &:hover{
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    }
+  }
 }
 
 // ------------------
@@ -394,6 +407,28 @@ $lineColor: rgba(0, 0, 0, 0.7);
 }
 
 // ------------------
+// $Footer
+// ------------------
+
+#footer{
+  width: 100%;
+  padding: 100px;
+  background-color: #252525;
+
+  h2{
+    text-align: center;
+    color:rgba(255, 255, 255, 0.6)
+  }
+  p{
+    z-index: 1;
+    font-size: 20px;
+    text-align: center;
+    color:rgba(255, 255, 255, 0.4)
+
+  }
+}
+
+// ------------------
 // $RWD
 // ------------------
 
@@ -449,5 +484,9 @@ $lineColor: rgba(0, 0, 0, 0.7);
       display: none;
       }
     }
+  }
+  #footer{
+    padding:100px 10px;
+
   }
 }

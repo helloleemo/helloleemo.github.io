@@ -94,6 +94,18 @@
   font-weight: 500;
   cursor: pointer;
 }
+.mainSection .downloadBtn {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  padding-top: 50px;
+  transition: all 0.3s;
+}
+.mainSection .downloadBtn:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
 
 .about .carousel-item img {
   object-fit: cover;
@@ -294,6 +306,22 @@
   transform: scale(1.2);
 }
 
+#footer {
+  width: 100%;
+  padding: 100px;
+  background-color: #252525;
+}
+#footer h2 {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+#footer p {
+  z-index: 1;
+  font-size: 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+}
+
 @media (max-width: 600px) {
   .mainNavbar {
     height: 70px;
@@ -344,6 +372,9 @@
   }
   .workSection .container .icons {
     display: none;
+  }
+  #footer {
+    padding: 100px 10px;
   }
 }
 

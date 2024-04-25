@@ -44,6 +44,9 @@ const allCards = document.querySelectorAll(".cover");
 var myCarousel = document.querySelector('#myCarousel')
 var carousel = new bootstrap.Carousel(myCarousel)
 
+$('.carousel').carousel({
+  pause:false,
+})
 
 //導航列隱藏
 let lastScrollTop = 0;
