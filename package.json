@@ -1,5 +1,12 @@
 {
+  "name": "work-vueApi.js",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node js/work-vueApi.js"
+  },
   "dependencies": {
-    "animejs": "^3.2.2"
+    "animejs": "^3.2.2",
+    "node-fetch": "^3.3.2"
   }
 }
